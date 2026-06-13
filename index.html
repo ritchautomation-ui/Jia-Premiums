@@ -1492,7 +1492,7 @@
            const price = getPrice();
            const priceText = price ? ` | Price: ₱${price.toLocaleString()}` : '';
            const msg = `Hi JIA Premiums! 👋\n\n📋 ORDER DETAILS:\n👤 Name: ${name}\n📱 Messenger: ${fb}\n🛒 Service: ${svc}\n📅 Duration: ${DURATION_LABELS[dur]}\n👥 Type: ${TYPE_LABELS[type]}${priceText}${notes?'\n<img src="grammarly.png" class="brand-logo" alt="Grammarly"> Notes: '+notes:''}\n\nI'd like to place this order. Please send GCash details. Thank you!`;
-           window.open(`https://www.facebook.com/messages/t/${FB_PAGE_ID}?text=${encodeURIComponent(msg)}`,'_blank');
+           window.open(`https://www.facebook.com/messages/e2ee/t/8804469352978840?text=${encodeURIComponent(msg)}`, '_blank');
          }
          
          // ── SCROLL FADE ──
