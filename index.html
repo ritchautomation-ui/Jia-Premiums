@@ -781,7 +781,7 @@
                </div>
                <!-- NOTES -->
                <div class="form-group">
-                  <label class="form-label"><img src="grammarly.png" class="brand-logo" alt="Grammarly"> Additional Notes <span style="color:var(--pearl-dim);font-size:11px;font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
+                  <label class="form-label"> Additional Notes <span style="color:var(--pearl-dim);font-size:11px;font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
                   <input type="text" class="form-input" id="notes" placeholder="Any special requests or questions?" />
                </div>
                <!-- ORDER PREVIEW -->
@@ -1491,7 +1491,26 @@
            }
            const price = getPrice();
            const priceText = price ? ` | Price: ₱${price.toLocaleString()}` : '';
-           const msg = `Hi JIA Premiums! 👋\n\n📋 ORDER DETAILS:\n👤 Name: ${name}\n📱 Messenger: ${fb}\n🛒 Service: ${svc}\n📅 Duration: ${DURATION_LABELS[dur]}\n👥 Type: ${TYPE_LABELS[type]}${priceText}${notes?'\n<img src="grammarly.png" class="brand-logo" alt="Grammarly"> Notes: '+notes:''}\n\nI'd like to place this order. Please send GCash details. Thank you!`;
+           const msg = `Hi JIA Premiums!
+
+━━━━━━━━━━━━━━
+ORDER DETAILS
+━━━━━━━━━━━━━━
+
+👤 Name: ${name}
+💬 Messenger: ${fb}
+🛍 Service: ${svc}
+📅 Duration: ${DURATION_LABELS[dur]}
+👥 Type: ${TYPE_LABELS[type]}${priceText}
+
+📝 Notes:
+${notes || 'None'}
+
+━━━━━━━━━━━━━━
+
+I'd like to place this order.
+Please send GCash details.
+Thank you!`;
            window.open(`https://www.facebook.com/messages/e2ee/t/8804469352978840?text=${encodeURIComponent(msg)}`, '_blank');
          }
          
