@@ -1514,25 +1514,25 @@ ${notes || 'None'}
 I'd like to place this order.
 Please send GCash details.
 Thank you!`;
-
 const encodedMsg = encodeURIComponent(msg);
 const THREAD_ID = "8804469352978840";
 
-// Detect mobile
-const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+// detect mobile
+const isMobile =
+/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 if (isMobile) {
-    // Mobile phones
+    // PHONE → opens Messenger app/browser
     window.location.href =
       `https://m.me/${THREAD_ID}?text=${encodedMsg}`;
 } else {
-    // Desktop / Laptop
+    // PC/LAPTOP
     window.open(
       `https://www.facebook.com/messages/e2ee/t/${THREAD_ID}?text=${encodedMsg}`,
       '_blank'
     );
 }
-         
+}
          // ── SCROLL FADE ──
          const obs = new IntersectionObserver(entries=>{
            entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
