@@ -1514,8 +1514,23 @@ ${notes || 'None'}
 I'd like to place this order.
 Please send GCash details.
 Thank you!`;
-           window.open(`https://www.facebook.com/messages/e2ee/t/8804469352978840?text=${encodeURIComponent(msg)}`, '_blank');
-         }
+           const encodedMsg = encodeURIComponent(msg);
+const THREAD_ID = "8804469352978840";
+
+// Detect mobile
+const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+if (isMobile) {
+    // Mobile phones
+    window.location.href =
+      `https://m.me/${THREAD_ID}?text=${encodedMsg}`;
+} else {
+    // Desktop / Laptop
+    window.open(
+      `https://www.facebook.com/messages/e2ee/t/${THREAD_ID}?text=${encodedMsg}`,
+      '_blank'
+    );
+}
          
          // ── SCROLL FADE ──
          const obs = new IntersectionObserver(entries=>{
