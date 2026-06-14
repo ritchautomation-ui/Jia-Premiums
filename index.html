@@ -5,9 +5,23 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>JIA Premiums | Affordable Premiums. Trusted Access. Instant Delivery.</title>
       <link rel="icon" type="image/png" href="logo.png.png">
-<link rel="shortcut icon" href="logo.png.png" type="image/png">
-<link rel="apple-touch-icon" href="logo.png.png">
+      <link rel="shortcut icon" href="logo.png.png" type="image/png">
+      <link rel="apple-touch-icon" href="logo.png.png">
       <meta name="description" content="JIA Premiums — Premium streaming, music, design tools & AI software at unbeatable prices. Fast delivery, trusted reseller. GCash accepted." />
+
+      <!-- Facebook Open Graph SEO Tags -->
+      <meta property="og:title" content="JIA Premiums | Affordable Premiums. Trusted Access. Instant Delivery." />
+      <meta property="og:description" content="Premium streaming, music, design tools & AI software at unbeatable prices. GCash accepted. Trusted since 2021 — 1,000+ happy clients." />
+      <meta property="og:image" content="https://jia-premiums.vercel.app/logo.png.png" />
+      <meta property="og:url" content="https://jia-premiums.vercel.app/" />
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="JIA Premiums" />
+      <meta property="og:locale" content="en_PH" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content="JIA Premiums | Affordable Premiums. Trusted Access. Instant Delivery." />
+      <meta name="twitter:description" content="Premium streaming, AI tools & software at unbeatable prices. GCash accepted." />
+      <meta name="twitter:image" content="https://jia-premiums.vercel.app/logo.png.png" />
+
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -33,6 +47,7 @@
          ::-webkit-scrollbar { width: 6px; }
          ::-webkit-scrollbar-track { background: var(--navy); }
          ::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 3px; }
+
          /* ANN BAR */
          .ann-bar {
          background: linear-gradient(90deg, var(--violet), var(--rose), var(--violet));
@@ -44,6 +59,7 @@
          }
          @keyframes gradMove { 0%{background-position:0%}100%{background-position:200%} }
          #countdown { font-variant-numeric: tabular-nums; }
+
          /* LIVE TRUST BAR */
          .live-bar {
          background: rgba(10,15,30,0.95);
@@ -58,14 +74,16 @@
          .live-dot.red { background: var(--rose); }
          .live-dot.gold { background: var(--gold); }
          @keyframes blink { 0%,100%{opacity:1}50%{opacity:.3} }
+
          /* MESSENGER FLOAT */
-         .messenger-float { position: fixed; bottom: 24px; right: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
+         .messenger-float { position: fixed; bottom: 90px; right: 24px; z-index: 9999; display: flex; flex-direction: column; align-items: flex-end; gap: 10px; }
          .messenger-bubble { background: linear-gradient(135deg,var(--rose),var(--violet)); color: #fff; padding: 8px 16px; border-radius: 20px; font-size: 13px; font-weight: 600; box-shadow: 0 8px 28px var(--rose-glow); animation: floatY 3s ease-in-out infinite; }
          .messenger-btn { width: 60px; height: 60px; background: linear-gradient(135deg,var(--rose),var(--violet)); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 8px 32px var(--rose-glow); transition: transform var(--t),box-shadow var(--t); animation: pulse 2s ease-in-out infinite; }
          .messenger-btn:hover { transform: scale(1.12); box-shadow: 0 12px 40px var(--rose-glow); }
          .messenger-btn svg { width:30px;height:30px;fill:#fff; }
          @keyframes floatY { 0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)} }
          @keyframes pulse { 0%,100%{box-shadow:0 8px 32px var(--rose-glow),0 0 0 0 rgba(233,30,140,.4)}50%{box-shadow:0 8px 32px var(--rose-glow),0 0 0 10px rgba(233,30,140,0)} }
+
          /* NAV */
          nav { position: sticky; top: 0; z-index: 100; backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); background: rgba(10,15,30,0.9); border-bottom: 1px solid var(--navy-border); padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; }
          .nav-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
@@ -78,16 +96,67 @@
          .nav-cta { background: linear-gradient(135deg,var(--rose),var(--violet)) !important; color: #fff !important; padding: 8px 18px !important; border-radius: 30px !important; font-weight: 600 !important; font-size: 13px !important; transition: transform var(--t),box-shadow var(--t) !important; }
          .nav-cta:hover { transform: translateY(-1px); box-shadow: 0 6px 24px var(--rose-glow); }
          .browsing-pill { font-size: 12px; color: var(--pearl-dim); display: flex; align-items: center; gap: 6px; }
-         .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
-         .hamburger span { width: 24px; height: 2px; background: var(--pearl); border-radius: 2px; transition: var(--t); }
-         .mobile-menu { display: none; position: fixed; inset: 64px 0 0; background: rgba(10,15,30,0.97); backdrop-filter: blur(20px); z-index: 99; flex-direction: column; align-items: center; justify-content: center; gap: 32px; }
-         .mobile-menu.open { display: flex; }
-         .mobile-menu a { color: var(--pearl); text-decoration: none; font-size: 22px; font-weight: 600; transition: color var(--t); }
-         .mobile-menu a:hover { color: var(--rose); }
-         /* HERO — CINEMATIC */
+
+         /* HAMBURGER — IMPROVED */
+         .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 8px; border-radius: 8px; transition: background var(--t); }
+         .hamburger:hover { background: rgba(124,58,237,0.15); }
+         .hamburger span { width: 24px; height: 2px; background: var(--pearl); border-radius: 2px; transition: transform var(--t), opacity var(--t), width var(--t); display: block; transform-origin: center; }
+         .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+         .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+         .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+         /* MOBILE MENU — IMPROVED */
+         .mobile-menu {
+           display: flex;
+           flex-direction: column;
+           position: fixed;
+           inset: 64px 0 0;
+           background: rgba(9,13,25,0.98);
+           backdrop-filter: blur(24px);
+           -webkit-backdrop-filter: blur(24px);
+           z-index: 99;
+           align-items: center;
+           justify-content: center;
+           gap: 0;
+           pointer-events: none;
+           opacity: 0;
+           transform: translateY(-12px);
+           transition: opacity 0.35s cubic-bezier(.4,0,.2,1), transform 0.35s cubic-bezier(.4,0,.2,1);
+           border-top: 1px solid var(--navy-border);
+         }
+         .mobile-menu.open { pointer-events: all; opacity: 1; transform: translateY(0); }
+         .mobile-menu a {
+           color: var(--pearl-dim);
+           text-decoration: none;
+           font-size: 18px;
+           font-weight: 600;
+           padding: 18px 40px;
+           width: 100%;
+           text-align: center;
+           border-bottom: 1px solid rgba(124,58,237,0.08);
+           transition: color var(--t), background var(--t);
+           letter-spacing: .01em;
+         }
+         .mobile-menu a:first-child { border-top: 1px solid rgba(124,58,237,0.08); }
+         .mobile-menu a:hover { color: var(--pearl); background: rgba(124,58,237,0.07); }
+         .mobile-menu a.mobile-cta {
+           margin-top: 20px;
+           background: linear-gradient(135deg,var(--rose),var(--violet));
+           color: #fff !important;
+           border-radius: 50px;
+           padding: 14px 36px;
+           width: auto;
+           font-size: 16px;
+           border: none;
+           box-shadow: 0 8px 28px var(--rose-glow);
+         }
+         .mobile-menu a.mobile-cta:hover { opacity: 0.9; transform: translateY(-1px); }
+
+         /* HERO */
          .hero { min-height: 96vh; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 80px 24px 60px; position: relative; overflow: hidden; }
          .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 70% 50% at 50% 0%, rgba(124,58,237,0.28) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(233,30,140,0.18) 0%, transparent 60%), radial-gradient(ellipse 40% 40% at 80% 60%, rgba(124,58,237,0.12) 0%, transparent 60%); }
          .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(124,58,237,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(124,58,237,.05) 1px,transparent 1px); background-size: 48px 48px; }
+
          /* FLOATING ICONS */
          .floating-icons { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
          .fi { position: absolute; font-size: 28px; opacity: 0.07; animation: drift linear infinite; filter: blur(0.5px); }
@@ -104,6 +173,7 @@
          .fi:nth-child(11) { left: 40%; top: 90%; animation-duration: 26s; animation-delay: -11s; }
          .fi:nth-child(12) { left: 75%; top: 80%; animation-duration: 20s; animation-delay: -13s; }
          @keyframes drift { 0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-30px) rotate(8deg)}100%{transform:translateY(0) rotate(0deg)} }
+
          /* PARTICLES */
          .particles { position: absolute; inset: 0; z-index: 0; overflow: hidden; pointer-events: none; }
          .particle { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: var(--rose); animation: particleFloat linear infinite; opacity: 0; }
@@ -121,6 +191,7 @@
          .btn-secondary:hover { border-color: var(--violet); background: rgba(124,58,237,0.1); }
          .hero-trust { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px; font-size: 13px; color: var(--pearl-dim); }
          .hero-trust-item { display: flex; align-items: center; gap: 6px; }
+
          /* TICKER */
          .ticker-wrap { background: var(--navy-mid); border-top: 1px solid var(--navy-border); border-bottom: 1px solid var(--navy-border); overflow: hidden; padding: 14px 0; position: relative; }
          .ticker-wrap::before,.ticker-wrap::after { content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; }
@@ -131,12 +202,14 @@
          @keyframes ticker { 0%{transform:translateX(0)}100%{transform:translateX(-50%)} }
          .ticker-item { display: inline-flex; align-items: center; gap: 6px; padding: 0 24px; font-size: 13px; font-weight: 600; color: var(--pearl-dim); letter-spacing: .07em; text-transform: uppercase; white-space: nowrap; }
          .ticker-dot { color: var(--rose); font-size: 16px; }
+
          /* STATS BAR */
          .stats-bar { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: var(--navy-border); border: 1px solid var(--navy-border); border-radius: var(--radius); overflow: hidden; margin: 60px auto; max-width: 900px; }
          .stat-item { background: var(--navy-card); padding: 28px 20px; text-align: center; transition: background var(--t); }
          .stat-item:hover { background: rgba(124,58,237,0.08); }
          .stat-num { font-family: 'Playfair Display',serif; font-size: 38px; font-weight: 900; background: linear-gradient(135deg,var(--rose),var(--violet)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; line-height: 1.1; }
          .stat-label { font-size: 13px; color: var(--pearl-dim); font-weight: 500; margin-top: 4px; }
+
          /* LAYOUT */
          section { padding: 80px 24px; }
          .container { max-width: 1100px; margin: 0 auto; }
@@ -145,10 +218,12 @@
          .section-title { font-family: 'Playfair Display',serif; font-size: clamp(28px,5vw,42px); font-weight: 800; line-height: 1.15; margin-bottom: 12px; }
          .section-sub { font-size: 16px; color: var(--pearl-dim); max-width: 520px; margin: 0 auto; }
          .divider { width: 48px; height: 3px; background: linear-gradient(90deg,var(--rose),var(--violet)); border-radius: 2px; margin: 0 auto 20px; }
+
          /* CAT CHIPS */
          .cat-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 56px; }
          .cat-chip { display: flex; align-items: center; gap: 8px; border: 1.5px solid var(--navy-border); background: var(--navy-card); color: var(--pearl-dim); padding: 10px 18px; border-radius: 50px; font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color var(--t),color var(--t),background var(--t),transform var(--t); }
          .cat-chip:hover { border-color: var(--rose); color: var(--pearl); background: rgba(233,30,140,0.08); transform: translateY(-2px); }
+
          /* PRODUCT CARDS */
          .products-section { background: var(--navy-mid); }
          .product-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(280px,1fr)); gap: 18px; }
@@ -158,11 +233,7 @@
          .product-card:hover::before { opacity: 1; }
          .product-card-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; }
          .product-icon-wrap { width: 48px; height: 48px; background: rgba(124,58,237,0.12); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; transition: transform var(--t); }
-         .brand-logo {
-         width: 30px;
-         height: 30px;
-         object-fit: contain;
-         }
+         .brand-logo { width: 30px; height: 30px; object-fit: contain; }
          .product-card:hover .product-icon-wrap { transform: scale(1.1) rotate(-4deg); }
          .product-badge { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; padding: 4px 10px; border-radius: 20px; background: rgba(124,58,237,0.15); color: #a78bfa; border: 1px solid rgba(124,58,237,0.25); }
          .product-badge.ai { background: rgba(233,30,140,0.12); color: #f472b6; border-color: rgba(233,30,140,0.25); }
@@ -170,8 +241,9 @@
          .product-name { font-family: 'Playfair Display',serif; font-size: 20px; font-weight: 700; margin-bottom: 6px; }
          .product-pricing { font-size: 13px; color: var(--pearl-dim); line-height: 1.7; flex: 1; margin-bottom: 16px; }
          .product-price-big { font-size: 26px; font-weight: 800; color: var(--gold); margin-bottom: 4px; font-family: 'Playfair Display',serif; }
-         .product-cta { display: block; text-align: center; background: linear-gradient(135deg,var(--rose),var(--violet)); color: #fff; padding: 11px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; transition: opacity var(--t),transform var(--t),box-shadow var(--t); }
+         .product-cta { display: block; text-align: center; background: linear-gradient(135deg,var(--rose),var(--violet)); color: #fff; padding: 11px; border-radius: 8px; font-weight: 700; font-size: 14px; text-decoration: none; transition: opacity var(--t),transform var(--t),box-shadow var(--t); cursor: pointer; border: none; width: 100%; }
          .product-cta:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 6px 20px var(--rose-glow); }
+
          /* WHY CHOOSE US */
          .why-section { background: var(--navy); }
          .why-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 16px; }
@@ -181,6 +253,7 @@
          .why-card:hover .why-icon { transform: scale(1.1) rotate(-5deg); }
          .why-title { font-weight: 700; font-size: 15px; }
          .why-desc { font-size: 13px; color: var(--pearl-dim); line-height: 1.5; }
+
          /* ORDER FORM */
          .order-section { background: var(--navy-mid); }
          .order-form-wrap { background: var(--navy-card); border: 1px solid var(--navy-border); border-radius: 20px; padding: 40px 36px; max-width: 680px; margin: 0 auto; position: relative; overflow: hidden; }
@@ -195,6 +268,7 @@
          .form-select option { background: #131C35; color: var(--pearl); }
          .select-wrapper { position: relative; }
          .select-arrow { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); pointer-events: none; color: var(--pearl-dim); font-size: 11px; }
+
          /* SEARCH INPUT */
          .search-wrapper { position: relative; }
          .search-wrapper input { padding-left: 40px; }
@@ -205,6 +279,7 @@
          #serviceDropdown .dd-item .dd-cat { font-size: 11px; color: var(--pearl-dim); margin-left: auto; text-transform: uppercase; letter-spacing: .04em; }
          #serviceDropdown::-webkit-scrollbar { width: 4px; }
          #serviceDropdown::-webkit-scrollbar-thumb { background: var(--violet); border-radius: 2px; }
+
          /* ORDER PREVIEW */
          .order-preview { background: rgba(124,58,237,0.08); border: 1px solid rgba(124,58,237,0.2); border-radius: 12px; padding: 18px 20px; margin-bottom: 24px; display: none; }
          .order-preview.visible { display: block; }
@@ -216,6 +291,7 @@
          .form-submit { width: 100%; padding: 16px; border-radius: 50px; border: none; background: linear-gradient(135deg,var(--rose),var(--violet)); color: #fff; font-size: 16px; font-weight: 800; cursor: pointer; transition: transform var(--t),box-shadow var(--t),opacity var(--t); box-shadow: 0 8px 32px var(--rose-glow); display: flex; align-items: center; justify-content: center; gap: 10px; letter-spacing: .01em; }
          .form-submit:hover { transform: translateY(-2px); box-shadow: 0 14px 40px var(--rose-glow); }
          .form-submit:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
          /* AI TOOLS */
          .ai-section { background: var(--navy); }
          .ai-filter { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 40px; }
@@ -229,8 +305,9 @@
          .ai-name { font-weight: 700; font-size: 15px; }
          .ai-cat-tag { font-size: 11px; color: var(--pearl-dim); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
          .ai-desc { font-size: 13px; color: var(--pearl-dim); line-height: 1.55; flex: 1; }
-         .ai-order-btn { display: block; text-align: center; padding: 9px; border-radius: 8px; border: 1.5px solid var(--navy-border); color: var(--pearl-dim); font-size: 13px; font-weight: 600; text-decoration: none; transition: all var(--t); }
+         .ai-order-btn { display: block; text-align: center; padding: 9px; border-radius: 8px; border: 1.5px solid var(--navy-border); color: var(--pearl-dim); font-size: 13px; font-weight: 600; text-decoration: none; transition: all var(--t); cursor: pointer; background: transparent; width: 100%; }
          .ai-order-btn:hover { border-color: var(--rose); color: var(--pearl); background: rgba(233,30,140,0.07); }
+
          /* HOW */
          .how-section { background: var(--navy-mid); }
          .how-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 2px; background: var(--navy-border); border: 1px solid var(--navy-border); border-radius: var(--radius); overflow: hidden; }
@@ -241,6 +318,7 @@
          .how-card:hover .how-icon-wrap { transform: scale(1.08) rotate(-4deg); }
          .how-title { font-family: 'Playfair Display',serif; font-size: 20px; font-weight: 700; }
          .how-desc { font-size: 14px; color: var(--pearl-dim); line-height: 1.6; }
+
          /* REVIEWS */
          .reviews-section { background: var(--navy); }
          .reviews-grid { display: grid; grid-template-columns: repeat(auto-fill,minmax(300px,1fr)); gap: 18px; }
@@ -252,11 +330,96 @@
          .review-avatar { width: 40px; height: 40px; background: linear-gradient(135deg,var(--rose),var(--violet)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; }
          .review-name { font-weight: 700; font-size: 14px; }
          .review-verified { font-size: 12px; color: #22c55e; font-weight: 600; }
+
+         /* PROOF / SCREENSHOT CAROUSEL */
+         .proof-section { background: var(--navy-mid); padding: 80px 24px; }
+         .proof-carousel-outer { position: relative; overflow: hidden; }
+         .proof-carousel-track { display: flex; gap: 16px; transition: transform 0.5s cubic-bezier(.4,0,.2,1); will-change: transform; }
+         .proof-card {
+           min-width: 280px;
+           max-width: 280px;
+           background: var(--navy-card);
+           border: 1px solid var(--navy-border);
+           border-radius: var(--radius);
+           overflow: hidden;
+           flex-shrink: 0;
+           transition: border-color var(--t), transform .35s cubic-bezier(.2,.8,.2,1), box-shadow var(--t);
+         }
+         .proof-card:hover { border-color: rgba(233,30,140,0.4); transform: translateY(-4px); box-shadow: 0 16px 40px rgba(233,30,140,0.12); }
+         .proof-img-wrap {
+           width: 100%;
+           height: 200px;
+           background: linear-gradient(135deg, rgba(124,58,237,0.15), rgba(233,30,140,0.1));
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           font-size: 48px;
+           position: relative;
+           overflow: hidden;
+         }
+         .proof-img-wrap img { width:100%; height:100%; object-fit: cover; }
+         .proof-img-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+         .proof-img-placeholder span { font-size: 13px; color: var(--pearl-dim); font-weight: 600; }
+         .proof-card-body { padding: 16px; }
+         .proof-label { font-size: 13px; font-weight: 700; color: var(--pearl); margin-bottom: 4px; }
+         .proof-sub { font-size: 12px; color: var(--pearl-dim); }
+         .proof-badge { display: inline-flex; align-items: center; gap: 5px; background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.25); color: #86efac; font-size: 11px; font-weight: 700; padding: 3px 8px; border-radius: 20px; margin-top: 8px; }
+         .carousel-controls { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 28px; }
+         .carousel-btn {
+           width: 44px; height: 44px; border-radius: 50%;
+           background: var(--navy-card); border: 1.5px solid var(--navy-border);
+           color: var(--pearl); font-size: 18px; cursor: pointer;
+           display: flex; align-items: center; justify-content: center;
+           transition: all var(--t);
+         }
+         .carousel-btn:hover { border-color: var(--rose); background: rgba(233,30,140,0.1); }
+         .carousel-dots { display: flex; gap: 6px; }
+         .carousel-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--navy-border); border: none; cursor: pointer; transition: all var(--t); padding: 0; }
+         .carousel-dot.active { background: var(--rose); transform: scale(1.3); }
+
          /* CTA BANNER */
          .cta-banner { background: linear-gradient(135deg,rgba(124,58,237,0.2),rgba(233,30,140,0.15)); border: 1px solid var(--navy-border); border-radius: 20px; padding: 64px 32px; text-align: center; max-width: 720px; margin: 0 auto; position: relative; overflow: hidden; }
          .cta-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 60% 60% at 50% 50%,rgba(233,30,140,0.1),transparent); }
          .cta-title { font-family: 'Playfair Display',serif; font-size: clamp(26px,5vw,40px); font-weight: 900; margin-bottom: 16px; position: relative; }
          .cta-sub { font-size: 16px; color: var(--pearl-dim); margin-bottom: 32px; position: relative; }
+
+         /* FAQ SECTION */
+         .faq-section { background: var(--navy); padding: 80px 24px; }
+         .faq-list { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; }
+         .faq-item {
+           background: var(--navy-card);
+           border: 1px solid var(--navy-border);
+           border-radius: var(--radius);
+           overflow: hidden;
+           transition: border-color var(--t);
+         }
+         .faq-item.open { border-color: rgba(233,30,140,0.35); }
+         .faq-question {
+           display: flex; align-items: center; justify-content: space-between;
+           padding: 20px 24px; cursor: pointer;
+           font-size: 15px; font-weight: 700; color: var(--pearl);
+           user-select: none; gap: 16px;
+           transition: background var(--t);
+         }
+         .faq-question:hover { background: rgba(124,58,237,0.06); }
+         .faq-icon {
+           width: 28px; height: 28px; border-radius: 50%;
+           background: rgba(124,58,237,0.12);
+           border: 1.5px solid rgba(124,58,237,0.25);
+           display: flex; align-items: center; justify-content: center;
+           flex-shrink: 0;
+           font-size: 16px; color: var(--rose); font-weight: 700;
+           transition: transform var(--t), background var(--t);
+         }
+         .faq-item.open .faq-icon { transform: rotate(45deg); background: rgba(233,30,140,0.15); border-color: rgba(233,30,140,0.3); }
+         .faq-answer {
+           max-height: 0; overflow: hidden;
+           transition: max-height 0.45s cubic-bezier(.4,0,.2,1), padding 0.3s ease;
+           padding: 0 24px;
+         }
+         .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 20px; }
+         .faq-answer p { font-size: 14px; color: var(--pearl-dim); line-height: 1.7; padding-top: 4px; border-top: 1px solid rgba(124,58,237,0.1); padding-top: 16px; }
+
          /* CONTACT */
          .contact-section { background: var(--navy-mid); }
          .contact-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 16px; margin-top: 40px; }
@@ -265,6 +428,7 @@
          .contact-icon { font-size: 24px; }
          .contact-label { font-size: 12px; color: var(--pearl-dim); font-weight: 600; text-transform: uppercase; letter-spacing: .06em; }
          .contact-val { font-size: 14px; font-weight: 700; color: var(--pearl); }
+
          /* FOOTER */
          footer { background: var(--navy); border-top: 1px solid var(--navy-border); padding: 32px 24px; text-align: center; }
          .footer-inner { display: flex; flex-direction: column; align-items: center; gap: 16px; }
@@ -273,27 +437,59 @@
          .footer-links a { color: var(--pearl-dim); text-decoration: none; font-size: 14px; transition: color var(--t); }
          .footer-links a:hover { color: var(--rose); }
          .footer-copy { font-size: 13px; color: rgba(248,244,255,0.35); }
+
+         /* MOBILE STICKY CTA */
+         .mobile-sticky-cta {
+           display: none;
+           position: fixed;
+           bottom: 0; left: 0; right: 0;
+           z-index: 9990;
+           padding: 12px 16px;
+           background: rgba(9,13,25,0.97);
+           border-top: 1px solid var(--navy-border);
+           backdrop-filter: blur(16px);
+           -webkit-backdrop-filter: blur(16px);
+         }
+         .mobile-sticky-cta a {
+           display: flex; align-items: center; justify-content: center; gap: 10px;
+           background: linear-gradient(135deg,var(--rose),var(--violet));
+           color: #fff;
+           padding: 14px;
+           border-radius: 14px;
+           font-weight: 800;
+           font-size: 15px;
+           text-decoration: none;
+           box-shadow: 0 6px 24px var(--rose-glow);
+           letter-spacing: .01em;
+         }
+
          /* FADE IN */
          .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease,transform .6s ease; }
          .fade-in.visible { opacity: 1; transform: translateY(0); }
+
          /* UNLISTED */
          .unlisted-card { background: var(--navy-card); border: 1.5px dashed rgba(124,58,237,0.3); border-radius: var(--radius); padding: 32px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
          .unlisted-icon { font-size: 36px; }
          .unlisted-title { font-family: 'Playfair Display',serif; font-size: 20px; font-weight: 700; }
          .unlisted-sub { font-size: 14px; color: var(--pearl-dim); max-width: 340px; }
+
          /* RESPONSIVE */
          @media (max-width: 768px) {
-         .nav-links { display: none; }
-         .hamburger { display: flex; }
-         .stats-bar { grid-template-columns: repeat(2,1fr); }
-         .how-grid { grid-template-columns: 1fr 1fr; }
-         .browsing-pill { display: none; }
-         .form-row { grid-template-columns: 1fr; }
-         .order-form-wrap { padding: 28px 20px; }
+           .nav-links { display: none; }
+           .hamburger { display: flex; }
+           .stats-bar { grid-template-columns: repeat(2,1fr); }
+           .how-grid { grid-template-columns: 1fr 1fr; }
+           .browsing-pill { display: none; }
+           .form-row { grid-template-columns: 1fr; }
+           .order-form-wrap { padding: 28px 20px; }
+           .mobile-sticky-cta { display: block; }
+           .messenger-float { bottom: 90px; }
+           body { padding-bottom: 74px; }
          }
          @media (max-width: 480px) {
-         .stats-bar { grid-template-columns: 1fr 1fr; }
-         .how-grid { grid-template-columns: 1fr; }
+           .stats-bar { grid-template-columns: 1fr 1fr; }
+           .how-grid { grid-template-columns: 1fr; }
+           .proof-card { min-width: 260px; max-width: 260px; }
          }
       </style>
    </head>
@@ -317,6 +513,12 @@
             </svg>
          </a>
       </div>
+      <!-- MOBILE STICKY CTA -->
+      <div class="mobile-sticky-cta">
+         <a href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank" rel="noopener">
+            💬 Order via Messenger
+         </a>
+      </div>
       <!-- NAV -->
       <nav>
          <a class="nav-brand" href="#">
@@ -334,11 +536,11 @@
          </ul>
          <div style="display:flex;align-items:center;gap:16px;">
             <div class="browsing-pill">
-               <span class="browsing-dot" style="width:7px;height:7px;background:#22c55e;border-radius:50%;animation:blink 1.5s ease-in-out infinite;"></span>
+               <span class="browsing-dot" style="width:7px;height:7px;background:#22c55e;border-radius:50%;animation:blink 1.5s ease-in-out infinite;display:inline-block;"></span>
                <span id="navViewers">18</span> browsing now
             </div>
             <button class="hamburger" id="menuBtn" aria-label="Toggle menu">
-            <span></span><span></span><span></span>
+               <span></span><span></span><span></span>
             </button>
          </div>
       </nav>
@@ -349,20 +551,19 @@
          <a href="#order" onclick="closeMenu()">Order Form</a>
          <a href="#how" onclick="closeMenu()">How It Works</a>
          <a href="#reviews" onclick="closeMenu()">Reviews</a>
-         <a href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank" style="color:var(--rose)">💬 Order Now</a>
+         <a href="#faq" onclick="closeMenu()">FAQ</a>
+         <a href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank" class="mobile-cta">💬 Order Now</a>
       </div>
       <!-- HERO -->
       <section class="hero" id="hero">
          <div class="hero-bg"></div>
          <div class="hero-grid"></div>
-         <!-- FLOATING ICONS -->
          <div class="floating-icons">
             <span class="fi"><img src="netflix.png" class="brand-logo" alt="Netflix"></span><span class="fi"><img src="spotify.png" class="brand-logo" alt="Spotify"></span><span class="fi">🤖</span>
             <span class="fi"><img src="disney.png" class="brand-logo" alt="Disney+"></span><span class="fi"><img src="canva.png" class="brand-logo" alt="Canva"></span><span class="fi">📺</span>
             <span class="fi"><img src="hbomax.png" class="brand-logo" alt="HBO Max"></span><span class="fi">🎧</span><span class="fi">📱</span>
             <span class="fi">🎞️</span><span class="fi">🌐</span><span class="fi">⚡</span>
          </div>
-         <!-- PARTICLES -->
          <div class="particles" id="particles"></div>
          <div class="hero-content fade-in visible">
             <div class="hero-eyebrow">
@@ -399,8 +600,8 @@
                <div class="stat-label">AI Tools</div>
             </div>
             <div class="stat-item">
-               <div class="stat-num">100%</div>
-               <div class="stat-label">Recommended</div>
+               <div class="stat-num">4+ yrs</div>
+               <div class="stat-label">Trusted Since 2021</div>
             </div>
             <div class="stat-item">
                <div class="stat-num">⚡</div>
@@ -482,58 +683,25 @@
             </div>
             <div class="product-grid fade-in">
                <div class="product-card">
-    <div class="product-card-header">
-        <div class="product-icon-wrap">
-            <img src="netflix.png" class="brand-logo" alt="Netflix">
-        </div>
-        <span class="product-badge">Streaming</span>
-    </div>
-
-    <div class="product-name">NETFLIX</div>
-
-    <div class="product-price-big">
-        ₱99
-        <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">
-            / 1 screen
-        </span>
-    </div>
-
-    <div class="product-pricing">
-        1 Screen: ₱99/mo • ₱179/3mo • ₱499/6mo • ₱899/yr<br>
-        2 Screens: ₱179/mo • ₱449/3mo • ₱699/6mo • ₱1,199/yr
-    </div>
-
-    <a class="product-cta" href="#order">
-        Order Now →
-    </a>
-</div>
-
-<div class="product-card">
-    <div class="product-card-header">
-        <div class="product-icon-wrap">
-            <img src="disney.png" class="brand-logo" alt="Disney+">
-        </div>
-        <span class="product-badge">Streaming</span>
-    </div>
-
-    <div class="product-name">DISNEY+</div>
-
-    <div class="product-price-big">
-        ₱109
-        <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">
-            / 1 screen
-        </span>
-    </div>
-
-    <div class="product-pricing">
-        1 Screen: ₱109/mo • ₱279/3mo • ₱489/6mo • ₱899/yr<br>
-        2 Screens: ₱169/mo • ₱439/3mo • ₱699/6mo • ₱1,199/yr
-    </div>
-
-    <a class="product-cta" href="#order">
-        Order Now →
-    </a>
-</div>
+                  <div class="product-card-header">
+                     <div class="product-icon-wrap"><img src="netflix.png" class="brand-logo" alt="Netflix"></div>
+                     <span class="product-badge">Streaming</span>
+                  </div>
+                  <div class="product-name">NETFLIX</div>
+                  <div class="product-price-big">₱99 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
+                  <div class="product-pricing">1 Screen: ₱99/mo • ₱179/3mo • ₱499/6mo • ₱899/yr<br>2 Screens: ₱179/mo • ₱449/3mo • ₱699/6mo • ₱1,199/yr</div>
+                  <button class="product-cta" onclick="orderProduct('Netflix')">Order Now →</button>
+               </div>
+               <div class="product-card">
+                  <div class="product-card-header">
+                     <div class="product-icon-wrap"><img src="disney.png" class="brand-logo" alt="Disney+"></div>
+                     <span class="product-badge">Streaming</span>
+                  </div>
+                  <div class="product-name">DISNEY+</div>
+                  <div class="product-price-big">₱109 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
+                  <div class="product-pricing">1 Screen: ₱109/mo • ₱279/3mo • ₱489/6mo • ₱899/yr<br>2 Screens: ₱169/mo • ₱439/3mo • ₱699/6mo • ₱1,199/yr</div>
+                  <button class="product-cta" onclick="orderProduct('Disney+')">Order Now →</button>
+               </div>
                <div class="product-card">
                   <div class="product-card-header">
                      <div class="product-icon-wrap"><img src="./primevideo.png" class="brand-logo" alt="Prime Video"></div>
@@ -542,7 +710,7 @@
                   <div class="product-name">PRIME VIDEO</div>
                   <div class="product-price-big">₱120 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 6 screens</span></div>
                   <div class="product-pricing">6 Screens: ₱120/mo · ₱299/3mo · ₱599/6mo · ₱1,099/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Prime Video')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -552,7 +720,7 @@
                   <div class="product-name">HBO MAX</div>
                   <div class="product-price-big">₱99 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱259/3mo · ₱399/6mo · ₱899/yr<br/>6 Screens: ₱249/mo · ₱599/3mo · ₱1,499/6mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('HBO Max')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -562,7 +730,7 @@
                   <div class="product-name">LOKLOK</div>
                   <div class="product-price-big">₱99 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱229/3mo · ₱379/6mo · ₱799/yr<br/>3 Screens: ₱149/mo · ₱599/3mo · ₱999/6mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Loklok')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -572,7 +740,7 @@
                   <div class="product-name">VIU</div>
                   <div class="product-price-big">₱139 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 4 devices</span></div>
                   <div class="product-pricing">4 Devices: ₱139/mo · ₱379/3mo · ₱649/6mo · ₱1,099/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Viu')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -582,7 +750,7 @@
                   <div class="product-name">VIVAMAX</div>
                   <div class="product-price-big">₱99 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱229/3mo · ₱379/6mo · ₱799/yr<br/>5 Screens: ₱149/mo · ₱349/3mo · ₱599/6mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Vivamax')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -592,7 +760,7 @@
                   <div class="product-name">VIVA ONE</div>
                   <div class="product-price-big">₱99 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱229/3mo · ₱379/6mo · ₱799/yr<br/>5 Screens: ₱149/mo · ₱349/3mo · ₱599/6mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Viva One')">Order Now →</button>
                </div>
             </div>
             <!-- MUSIC -->
@@ -610,7 +778,7 @@
                   <div class="product-name">SPOTIFY</div>
                   <div class="product-price-big">₱65 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ month</span></div>
                   <div class="product-pricing">1–3 Screens: ₱65/mo · ₱399/6mo · ₱799/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Spotify')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -620,7 +788,7 @@
                   <div class="product-name">YOUTUBE</div>
                   <div class="product-price-big">₱49 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱49/mo · ₱179/3mo · ₱399/6mo · ₱899/yr<br/>6 Screens: ₱80/mo · ₱230/3mo · ₱400/6mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('YouTube')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -630,7 +798,7 @@
                   <div class="product-name">IWANTTFC</div>
                   <div class="product-price-big">₱120 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 6 screens</span></div>
                   <div class="product-pricing">6 Screens: ₱120/mo · ₱299/3mo · ₱599/6mo · ₱1,099/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('iWantTFC')">Order Now →</button>
                </div>
             </div>
             <!-- DESIGN + TOOLS -->
@@ -648,7 +816,7 @@
                   <div class="product-name">CANVA</div>
                   <div class="product-price-big">₱50 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ month</span></div>
                   <div class="product-pricing">4 Devices: ₱50/mo · ₱399/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Canva')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -658,7 +826,7 @@
                   <div class="product-name">CAPCUT</div>
                   <div class="product-price-big">₱150 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ month</span></div>
                   <div class="product-pricing">4 Devices: ₱150/mo · ₱399/3mo · ₱699/6mo · ₱1,199/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('CapCut')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -668,7 +836,7 @@
                   <div class="product-name">CHATGPT PLUS</div>
                   <div class="product-price-big">₱180 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 1 screen</span></div>
                   <div class="product-pricing">1 Screen: ₱180/mo · ₱499/3mo · ₱899/6mo · ₱1,599/yr<br/>5 Screens: ₱880/mo · ₱2,399/3mo</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('ChatGPT Plus')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -678,7 +846,7 @@
                   <div class="product-name">CHATGPT GO</div>
                   <div class="product-price-big">₱249 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ 6 screens</span></div>
                   <div class="product-pricing">6 Screens: ₱249/mo · ₱699/3mo · ₱1,299/6mo · ₱2,299/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('ChatGPT Go')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -688,7 +856,7 @@
                   <div class="product-name">GRAMMARLY</div>
                   <div class="product-price-big">₱50 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ month</span></div>
                   <div class="product-pricing">1 Device/Shared: ₱50/mo · ₱129/3mo · ₱229/6mo · ₱399/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('Grammarly')">Order Now →</button>
                </div>
                <div class="product-card">
                   <div class="product-card-header">
@@ -698,7 +866,7 @@
                   <div class="product-name">IQIYI</div>
                   <div class="product-price-big">₱139 <span style="font-size:14px;color:var(--pearl-dim);font-family:'Inter'">/ month</span></div>
                   <div class="product-pricing">4 Devices: ₱139/mo · ₱379/3mo · ₱649/6mo · ₱1,099/yr</div>
-                  <a class="product-cta" href="#order">Order Now →</a>
+                  <button class="product-cta" onclick="orderProduct('iQIYI')">Order Now →</button>
                </div>
                <div class="unlisted-card">
                   <div class="unlisted-icon">👀</div>
@@ -719,7 +887,7 @@
             </div>
          </div>
       </section>
-      <!-- ======= ORDER FORM ======= -->
+      <!-- ORDER FORM -->
       <section id="order" class="order-section">
          <div class="container">
             <div class="section-header fade-in">
@@ -729,7 +897,6 @@
                <p class="section-sub">Fill out the form below and we'll send you the payment details on Messenger. GCash accepted.</p>
             </div>
             <div class="order-form-wrap fade-in">
-               <!-- NAME -->
                <div class="form-row">
                   <div class="form-group">
                      <label class="form-label">👤 Full Name <span class="required">*</span></label>
@@ -740,7 +907,6 @@
                      <input type="text" class="form-input" id="fbname" placeholder="e.g. Juan DC" />
                   </div>
                </div>
-               <!-- SERVICE SEARCH -->
                <div class="form-group">
                   <label class="form-label">🔍 Search Service <span class="required">*</span></label>
                   <div class="search-wrapper" style="position:relative;">
@@ -750,7 +916,6 @@
                   </div>
                   <input type="hidden" id="selectedService" />
                </div>
-               <!-- DURATION -->
                <div class="form-row">
                   <div class="form-group">
                      <label class="form-label">📅 Duration <span class="required">*</span></label>
@@ -765,7 +930,6 @@
                         <span class="select-arrow">▼</span>
                      </div>
                   </div>
-                  <!-- ACCOUNT TYPE -->
                   <div class="form-group">
                      <label class="form-label">👥 Account Type <span class="required">*</span></label>
                      <div class="select-wrapper">
@@ -782,12 +946,10 @@
                      </div>
                   </div>
                </div>
-               <!-- NOTES -->
                <div class="form-group">
                   <label class="form-label"> Additional Notes <span style="color:var(--pearl-dim);font-size:11px;font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
                   <input type="text" class="form-input" id="notes" placeholder="Any special requests or questions?" />
                </div>
-               <!-- ORDER PREVIEW -->
                <div class="order-preview" id="orderPreview">
                   <div class="preview-title">📋 Order Summary</div>
                   <div class="preview-row"><span class="label">Name</span><span class="value" id="previewName">—</span></div>
@@ -822,314 +984,34 @@
                <button class="ai-filter-btn" data-filter="writing">✍️ AI Writing</button>
             </div>
             <div class="ai-grid fade-in" id="aiGrid">
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">✍️</span>
-                     <div>
-                        <div class="ai-name">Jenni AI</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI academic writing workspace with real-time citation in 2,600+ styles and PDF research library chat.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">📄</span>
-                     <div>
-                        <div class="ai-name">Paperpal</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Professional academic writing toolkit with grammar checking and citation formatting in 10,000+ styles.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🔬</span>
-                     <div>
-                        <div class="ai-name">Elicit AI</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">ML-powered research assistant that summarizes academic papers and organizes data into structured tables.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🚀</span>
-                     <div>
-                        <div class="ai-name">SciSpace</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI research platform with scholarly AI detector, paper summarization, and citation management.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">💬</span>
-                     <div>
-                        <div class="ai-name">AnswerThis</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Streamlines literature reviews with cited answers from 250M+ scholarly articles.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="research">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">📊</span>
-                     <div>
-                        <div class="ai-name">Consensus</div>
-                        <div class="ai-cat-tag">Research &amp; Academic</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI research search engine that finds and summarizes findings from peer-reviewed scientific papers.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">👻</span>
-                     <div>
-                        <div class="ai-name">StealthWriter AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI humanizer that rewrites AI-generated content to bypass detectors like Turnitin and GPTZero.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🖊️</span>
-                     <div>
-                        <div class="ai-name">WriteHuman AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Translates robotic AI text into warm, natural human speech while remaining SEO-friendly.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🛡️</span>
-                     <div>
-                        <div class="ai-name">AIUndetect AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Humanizes AI-generated text to bypass Turnitin, GPTZero, and Originality.ai.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🔒</span>
-                     <div>
-                        <div class="ai-name">Undetectable AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Rewrites AI content to sound authentically human. Tests against multiple detectors simultaneously.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🥷</span>
-                     <div>
-                        <div class="ai-name">StealthGPT AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Comprehensive suite: AI Humanizer, Stealth Writer, and Chat with PDF to bypass all detectors.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="humanization">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">✅</span>
-                     <div>
-                        <div class="ai-name">Originality AI</div>
-                        <div class="ai-cat-tag">AI Humanization</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Professional-grade AI detection and plagiarism checking for content marketers and SEOs.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="study">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🃏</span>
-                     <div>
-                        <div class="ai-name">Gizmo AI</div>
-                        <div class="ai-cat-tag">Study &amp; Learning</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Converts PDFs, notes, and YouTube videos into interactive flashcards using spaced repetition.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="study">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🧠</span>
-                     <div>
-                        <div class="ai-name">Brainscape</div>
-                        <div class="ai-cat-tag">Study &amp; Learning</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Flashcard platform using AI-powered creation and spaced repetition to help memorize for exams.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="study">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">📓</span>
-                     <div>
-                        <div class="ai-name">NoteGPT IO</div>
-                        <div class="ai-cat-tag">Study &amp; Learning</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">All-in-one learning hub: summarizes YouTube content, provides transcripts, and generates mind maps.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="study">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">⚡</span>
-                     <div>
-                        <div class="ai-name">TurboLearn AI</div>
-                        <div class="ai-cat-tag">Study &amp; Learning</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Transforms PDFs, lecture recordings, and YouTube videos into notes and flashcards instantly.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="study">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">💬</span>
-                     <div>
-                        <div class="ai-name">ChatPDF AI</div>
-                        <div class="ai-cat-tag">Study &amp; Learning</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Talk to any PDF document with AI. Extract insights from research papers instantly.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="content">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🎪</span>
-                     <div>
-                        <div class="ai-name">Genially</div>
-                        <div class="ai-cat-tag">Content Creation</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Interactive presentations, infographics, and gamified content in 100+ languages.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="content">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🎴</span>
-                     <div>
-                        <div class="ai-name">Gamma App</div>
-                        <div class="ai-cat-tag">Content Creation</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Generates presentations, documents, and websites from short prompts using a card-based layout.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="content">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🎨</span>
-                     <div>
-                        <div class="ai-name">OpenArt AI</div>
-                        <div class="ai-cat-tag">Content Creation</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI image generation using Stable Diffusion. Create high-quality art and upscale images.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="content">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🖥️</span>
-                     <div>
-                        <div class="ai-name">Figma Pro</div>
-                        <div class="ai-cat-tag">Content Creation</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Collaborative interface design with unlimited files, shared libraries, and real-time team collaboration.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="productivity">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🔇</span>
-                     <div>
-                        <div class="ai-name">Krisp AI</div>
-                        <div class="ai-cat-tag">Productivity</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI noise cancellation with Meeting Assistant — generates transcripts and action items automatically.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="productivity">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🦦</span>
-                     <div>
-                        <div class="ai-name">Otter AI</div>
-                        <div class="ai-cat-tag">Productivity</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Real-time meeting transcription with speaker identification for all your calls and lectures.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="productivity">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">📋</span>
-                     <div>
-                        <div class="ai-name">Notion</div>
-                        <div class="ai-cat-tag">Productivity</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">All-in-one workspace for notes, tasks, wikis, and databases with full AI features unlocked.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="productivity">
-                  <div class="ai-card-top">
-                     <span class="ai-icon"><img src="spotify.png" class="brand-logo" alt="Spotify"></span>
-                     <div>
-                        <div class="ai-name">Moises AI</div>
-                        <div class="ai-cat-tag">Productivity</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">Separate audio tracks, remove vocals, isolate stems, and adjust tempo — perfect for musicians.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="writing">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">✍️</span>
-                     <div>
-                        <div class="ai-name">JustDone AI</div>
-                        <div class="ai-cat-tag">AI Writing</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">All-in-one AI writing assistant with plagiarism checking, AI detection, and content optimization.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="writing">
-                  <div class="ai-card-top">
-                     <span class="ai-icon">🦸</span>
-                     <div>
-                        <div class="ai-name">Sidekicker AI</div>
-                        <div class="ai-cat-tag">AI Writing</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI Humanizer, detector, and plagiarism checker in one comprehensive suite.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
-               <div class="ai-card" data-category="writing">
-                  <div class="ai-card-top">
-                     <span class="ai-icon"><img src="grammarly.png" class="brand-logo" alt="Grammarly"></span>
-                     <div>
-                        <div class="ai-name">WriteLess AI</div>
-                        <div class="ai-cat-tag">AI Writing</div>
-                     </div>
-                  </div>
-                  <p class="ai-desc">AI writing for students and researchers with verifiable academic citations in APA, MLA, and more.</p>
-                  <a class="ai-order-btn" href="#order">Order Now</a>
-               </div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">✍️</span><div><div class="ai-name">Jenni AI</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">AI academic writing workspace with real-time citation in 2,600+ styles and PDF research library chat.</p><button class="ai-order-btn" onclick="orderProduct('Jenni AI')">Order Now</button></div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">📄</span><div><div class="ai-name">Paperpal</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">Professional academic writing toolkit with grammar checking and citation formatting in 10,000+ styles.</p><button class="ai-order-btn" onclick="orderProduct('Paperpal')">Order Now</button></div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">🔬</span><div><div class="ai-name">Elicit AI</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">ML-powered research assistant that summarizes academic papers and organizes data into structured tables.</p><button class="ai-order-btn" onclick="orderProduct('Elicit AI')">Order Now</button></div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">🚀</span><div><div class="ai-name">SciSpace</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">AI research platform with scholarly AI detector, paper summarization, and citation management.</p><button class="ai-order-btn" onclick="orderProduct('SciSpace')">Order Now</button></div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">💬</span><div><div class="ai-name">AnswerThis</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">Streamlines literature reviews with cited answers from 250M+ scholarly articles.</p><button class="ai-order-btn" onclick="orderProduct('AnswerThis')">Order Now</button></div>
+               <div class="ai-card" data-category="research"><div class="ai-card-top"><span class="ai-icon">📊</span><div><div class="ai-name">Consensus</div><div class="ai-cat-tag">Research &amp; Academic</div></div></div><p class="ai-desc">AI research search engine that finds and summarizes findings from peer-reviewed scientific papers.</p><button class="ai-order-btn" onclick="orderProduct('Consensus')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">👻</span><div><div class="ai-name">StealthWriter AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">AI humanizer that rewrites AI-generated content to bypass detectors like Turnitin and GPTZero.</p><button class="ai-order-btn" onclick="orderProduct('StealthWriter AI')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">🖊️</span><div><div class="ai-name">WriteHuman AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">Translates robotic AI text into warm, natural human speech while remaining SEO-friendly.</p><button class="ai-order-btn" onclick="orderProduct('WriteHuman AI')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">🛡️</span><div><div class="ai-name">AIUndetect AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">Humanizes AI-generated text to bypass Turnitin, GPTZero, and Originality.ai.</p><button class="ai-order-btn" onclick="orderProduct('AIUndetect AI')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">🔒</span><div><div class="ai-name">Undetectable AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">Rewrites AI content to sound authentically human. Tests against multiple detectors simultaneously.</p><button class="ai-order-btn" onclick="orderProduct('Undetectable AI')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">🥷</span><div><div class="ai-name">StealthGPT AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">Comprehensive suite: AI Humanizer, Stealth Writer, and Chat with PDF to bypass all detectors.</p><button class="ai-order-btn" onclick="orderProduct('StealthGPT AI')">Order Now</button></div>
+               <div class="ai-card" data-category="humanization"><div class="ai-card-top"><span class="ai-icon">✅</span><div><div class="ai-name">Originality AI</div><div class="ai-cat-tag">AI Humanization</div></div></div><p class="ai-desc">Professional-grade AI detection and plagiarism checking for content marketers and SEOs.</p><button class="ai-order-btn" onclick="orderProduct('Originality AI')">Order Now</button></div>
+               <div class="ai-card" data-category="study"><div class="ai-card-top"><span class="ai-icon">🃏</span><div><div class="ai-name">Gizmo AI</div><div class="ai-cat-tag">Study &amp; Learning</div></div></div><p class="ai-desc">Converts PDFs, notes, and YouTube videos into interactive flashcards using spaced repetition.</p><button class="ai-order-btn" onclick="orderProduct('Gizmo AI')">Order Now</button></div>
+               <div class="ai-card" data-category="study"><div class="ai-card-top"><span class="ai-icon">🧠</span><div><div class="ai-name">Brainscape</div><div class="ai-cat-tag">Study &amp; Learning</div></div></div><p class="ai-desc">Flashcard platform using AI-powered creation and spaced repetition to help memorize for exams.</p><button class="ai-order-btn" onclick="orderProduct('Brainscape')">Order Now</button></div>
+               <div class="ai-card" data-category="study"><div class="ai-card-top"><span class="ai-icon">📓</span><div><div class="ai-name">NoteGPT IO</div><div class="ai-cat-tag">Study &amp; Learning</div></div></div><p class="ai-desc">All-in-one learning hub: summarizes YouTube content, provides transcripts, and generates mind maps.</p><button class="ai-order-btn" onclick="orderProduct('NoteGPT IO')">Order Now</button></div>
+               <div class="ai-card" data-category="study"><div class="ai-card-top"><span class="ai-icon">⚡</span><div><div class="ai-name">TurboLearn AI</div><div class="ai-cat-tag">Study &amp; Learning</div></div></div><p class="ai-desc">Transforms PDFs, lecture recordings, and YouTube videos into notes and flashcards instantly.</p><button class="ai-order-btn" onclick="orderProduct('TurboLearn AI')">Order Now</button></div>
+               <div class="ai-card" data-category="study"><div class="ai-card-top"><span class="ai-icon">💬</span><div><div class="ai-name">ChatPDF AI</div><div class="ai-cat-tag">Study &amp; Learning</div></div></div><p class="ai-desc">Talk to any PDF document with AI. Extract insights from research papers instantly.</p><button class="ai-order-btn" onclick="orderProduct('ChatPDF AI')">Order Now</button></div>
+               <div class="ai-card" data-category="content"><div class="ai-card-top"><span class="ai-icon">🎪</span><div><div class="ai-name">Genially</div><div class="ai-cat-tag">Content Creation</div></div></div><p class="ai-desc">Interactive presentations, infographics, and gamified content in 100+ languages.</p><button class="ai-order-btn" onclick="orderProduct('Genially')">Order Now</button></div>
+               <div class="ai-card" data-category="content"><div class="ai-card-top"><span class="ai-icon">🎴</span><div><div class="ai-name">Gamma App</div><div class="ai-cat-tag">Content Creation</div></div></div><p class="ai-desc">Generates presentations, documents, and websites from short prompts using a card-based layout.</p><button class="ai-order-btn" onclick="orderProduct('Gamma App')">Order Now</button></div>
+               <div class="ai-card" data-category="content"><div class="ai-card-top"><span class="ai-icon">🎨</span><div><div class="ai-name">OpenArt AI</div><div class="ai-cat-tag">Content Creation</div></div></div><p class="ai-desc">AI image generation using Stable Diffusion. Create high-quality art and upscale images.</p><button class="ai-order-btn" onclick="orderProduct('OpenArt AI')">Order Now</button></div>
+               <div class="ai-card" data-category="content"><div class="ai-card-top"><span class="ai-icon">🖥️</span><div><div class="ai-name">Figma Pro</div><div class="ai-cat-tag">Content Creation</div></div></div><p class="ai-desc">Collaborative interface design with unlimited files, shared libraries, and real-time team collaboration.</p><button class="ai-order-btn" onclick="orderProduct('Figma Pro')">Order Now</button></div>
+               <div class="ai-card" data-category="productivity"><div class="ai-card-top"><span class="ai-icon">🔇</span><div><div class="ai-name">Krisp AI</div><div class="ai-cat-tag">Productivity</div></div></div><p class="ai-desc">AI noise cancellation with Meeting Assistant — generates transcripts and action items automatically.</p><button class="ai-order-btn" onclick="orderProduct('Krisp AI')">Order Now</button></div>
+               <div class="ai-card" data-category="productivity"><div class="ai-card-top"><span class="ai-icon">🦦</span><div><div class="ai-name">Otter AI</div><div class="ai-cat-tag">Productivity</div></div></div><p class="ai-desc">Real-time meeting transcription with speaker identification for all your calls and lectures.</p><button class="ai-order-btn" onclick="orderProduct('Otter AI')">Order Now</button></div>
+               <div class="ai-card" data-category="productivity"><div class="ai-card-top"><span class="ai-icon">📋</span><div><div class="ai-name">Notion</div><div class="ai-cat-tag">Productivity</div></div></div><p class="ai-desc">All-in-one workspace for notes, tasks, wikis, and databases with full AI features unlocked.</p><button class="ai-order-btn" onclick="orderProduct('Notion')">Order Now</button></div>
+               <div class="ai-card" data-category="productivity"><div class="ai-card-top"><span class="ai-icon">🎵</span><div><div class="ai-name">Moises AI</div><div class="ai-cat-tag">Productivity</div></div></div><p class="ai-desc">Separate audio tracks, remove vocals, isolate stems, and adjust tempo — perfect for musicians.</p><button class="ai-order-btn" onclick="orderProduct('Moises AI')">Order Now</button></div>
+               <div class="ai-card" data-category="writing"><div class="ai-card-top"><span class="ai-icon">✍️</span><div><div class="ai-name">JustDone AI</div><div class="ai-cat-tag">AI Writing</div></div></div><p class="ai-desc">All-in-one AI writing assistant with plagiarism checking, AI detection, and content optimization.</p><button class="ai-order-btn" onclick="orderProduct('JustDone AI')">Order Now</button></div>
+               <div class="ai-card" data-category="writing"><div class="ai-card-top"><span class="ai-icon">🦸</span><div><div class="ai-name">Sidekicker AI</div><div class="ai-cat-tag">AI Writing</div></div></div><p class="ai-desc">AI Humanizer, detector, and plagiarism checker in one comprehensive suite.</p><button class="ai-order-btn" onclick="orderProduct('Sidekicker AI')">Order Now</button></div>
+               <div class="ai-card" data-category="writing"><div class="ai-card-top"><span class="ai-icon">📝</span><div><div class="ai-name">WriteLess AI</div><div class="ai-cat-tag">AI Writing</div></div></div><p class="ai-desc">AI writing for students and researchers with verifiable academic citations in APA, MLA, and more.</p><button class="ai-order-btn" onclick="orderProduct('WriteLess AI')">Order Now</button></div>
             </div>
          </div>
       </section>
@@ -1184,10 +1066,7 @@
                   <p class="review-text">Super legit! Got my Jenni AI access right after payment. Will definitely order again. 10/10 trusted seller!</p>
                   <div class="review-author">
                      <div class="review-avatar">JM</div>
-                     <div>
-                        <div class="review-name">Jessa M.</div>
-                        <div class="review-verified">✔ Verified Client</div>
-                     </div>
+                     <div><div class="review-name">Jessa M.</div><div class="review-verified">✔ Verified Client</div></div>
                   </div>
                </div>
                <div class="review-card">
@@ -1195,10 +1074,7 @@
                   <p class="review-text">Nag-order ako ng Undetectable AI, agad na na-deliver. Legit at mura pa! Highly recommend sa mga students.</p>
                   <div class="review-author">
                      <div class="review-avatar">RD</div>
-                     <div>
-                        <div class="review-name">Renz D.</div>
-                        <div class="review-verified">✔ Verified Client</div>
-                     </div>
+                     <div><div class="review-name">Renz D.</div><div class="review-verified">✔ Verified Client</div></div>
                   </div>
                </div>
                <div class="review-card">
@@ -1206,10 +1082,7 @@
                   <p class="review-text">Fast response, legit seller, and the price is really affordable. Been buying here since 2023. No issues ever!</p>
                   <div class="review-author">
                      <div class="review-avatar">AL</div>
-                     <div>
-                        <div class="review-name">Ana L.</div>
-                        <div class="review-verified">✔ Verified Client</div>
-                     </div>
+                     <div><div class="review-name">Ana L.</div><div class="review-verified">✔ Verified Client</div></div>
                   </div>
                </div>
                <div class="review-card">
@@ -1217,10 +1090,7 @@
                   <p class="review-text">Pinaka-mura na streaming subscription na nakita ko. Naka-ilang beses na akong nag-order. Always on time ang delivery!</p>
                   <div class="review-author">
                      <div class="review-avatar">MG</div>
-                     <div>
-                        <div class="review-name">Mark G.</div>
-                        <div class="review-verified">✔ Verified Client</div>
-                     </div>
+                     <div><div class="review-name">Mark G.</div><div class="review-verified">✔ Verified Client</div></div>
                   </div>
                </div>
                <div class="review-card">
@@ -1228,10 +1098,7 @@
                   <p class="review-text">Never had a problem. Very responsive seller, great prices. Already recommended to my classmates!</p>
                   <div class="review-author">
                      <div class="review-avatar">SK</div>
-                     <div>
-                        <div class="review-name">Sofia K.</div>
-                        <div class="review-verified">✔ Verified Client</div>
-                     </div>
+                     <div><div class="review-name">Sofia K.</div><div class="review-verified">✔ Verified Client</div></div>
                   </div>
                </div>
                <div class="review-card">
@@ -1239,10 +1106,149 @@
                   <p class="review-text">Canva Pro at Netflix in one order — delivery was instant. JIA Premiums talaga ang go-to ko para sa ganito!</p>
                   <div class="review-author">
                      <div class="review-avatar">JP</div>
-                     <div>
-                        <div class="review-name">Jay P.</div>
-                        <div class="review-verified">✔ Verified Client</div>
+                     <div><div class="review-name">Jay P.</div><div class="review-verified">✔ Verified Client</div></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+      <!-- PROOF / SCREENSHOT CAROUSEL -->
+      <section class="proof-section" id="proof">
+         <div class="container">
+            <div class="section-header fade-in">
+               <p class="section-eyebrow">✅ Customer Proof</p>
+               <div class="divider"></div>
+               <h2 class="section-title">Real Transactions. Real Clients.</h2>
+               <p class="section-sub">Screenshots of actual orders, vouches, and successful deliveries from our happy clients.</p>
+            </div>
+            <div class="proof-carousel-outer fade-in">
+               <div class="proof-carousel-track" id="proofTrack">
+                  <!-- Proof cards — replace proof-img-wrap content with <img src="your-screenshot.jpg"> when available -->
+                  <div class="proof-card">
+                     <div class="proof-img-wrap">
+                        <div class="proof-img-placeholder">📸<span>Client Screenshot</span></div>
                      </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">Netflix 1 Screen — 6 Months</div>
+                        <div class="proof-sub">Delivered within 5 minutes of payment</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+                  <div class="proof-card">
+                     <div class="proof-img-wrap" style="background:linear-gradient(135deg,rgba(34,197,94,0.12),rgba(124,58,237,0.1))">
+                        <div class="proof-img-placeholder">💬<span>Messenger Vouch</span></div>
+                     </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">ChatGPT Plus — 1 Month</div>
+                        <div class="proof-sub">Client vouch via Messenger</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+                  <div class="proof-card">
+                     <div class="proof-img-wrap" style="background:linear-gradient(135deg,rgba(245,200,66,0.1),rgba(233,30,140,0.1))">
+                        <div class="proof-img-placeholder">🧾<span>GCash Receipt</span></div>
+                     </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">Spotify — 1 Year</div>
+                        <div class="proof-sub">Successful GCash payment confirmed</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+                  <div class="proof-card">
+                     <div class="proof-img-wrap" style="background:linear-gradient(135deg,rgba(124,58,237,0.15),rgba(34,197,94,0.08))">
+                        <div class="proof-img-placeholder">⭐<span>5-Star Feedback</span></div>
+                     </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">Canva Pro — 1 Month</div>
+                        <div class="proof-sub">5-star feedback from repeat client</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+                  <div class="proof-card">
+                     <div class="proof-img-wrap" style="background:linear-gradient(135deg,rgba(233,30,140,0.12),rgba(124,58,237,0.08))">
+                        <div class="proof-img-placeholder">📱<span>Disney+ Access</span></div>
+                     </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">Disney+ 2 Screens — 3 Months</div>
+                        <div class="proof-sub">Instant delivery, client satisfied</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+                  <div class="proof-card">
+                     <div class="proof-img-wrap" style="background:linear-gradient(135deg,rgba(34,197,94,0.1),rgba(245,200,66,0.08))">
+                        <div class="proof-img-placeholder">🤖<span>AI Tool Access</span></div>
+                     </div>
+                     <div class="proof-card-body">
+                        <div class="proof-label">Jenni AI — 1 Month</div>
+                        <div class="proof-sub">Student order, delivered same day</div>
+                        <div class="proof-badge">✔ Verified Order</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="carousel-controls fade-in">
+               <button class="carousel-btn" id="proofPrev" aria-label="Previous">&#8592;</button>
+               <div class="carousel-dots" id="proofDots"></div>
+               <button class="carousel-btn" id="proofNext" aria-label="Next">&#8594;</button>
+            </div>
+            <p style="text-align:center;font-size:13px;color:var(--pearl-dim);margin-top:16px;">
+               Want your proof featured here? Send us a screenshot on Messenger after your purchase! 📸
+            </p>
+         </div>
+      </section>
+      <!-- FAQ -->
+      <section class="faq-section" id="faq">
+         <div class="container">
+            <div class="section-header fade-in">
+               <p class="section-eyebrow">Got Questions?</p>
+               <div class="divider"></div>
+               <h2 class="section-title">Frequently Asked Questions</h2>
+               <p class="section-sub">Everything you need to know before placing your first order.</p>
+            </div>
+            <div class="faq-list fade-in">
+               <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                     <span>🛡️ Is JIA Premiums legit and safe?</span>
+                     <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                     <p>Yes! JIA Premiums has been operating since 2021 — over 4 years of trusted service with 1,000+ happy clients. All orders are processed manually by a real person, and access is delivered directly to you via Messenger. Many of our clients are repeat buyers and have vouched for us publicly. You can check our reviews section and proof screenshots above for evidence of real transactions.</p>
+                  </div>
+               </div>
+               <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                     <span>⚡ How fast is the delivery?</span>
+                     <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                     <p>Most orders are delivered within minutes after payment confirmation via GCash. We are active on Messenger daily and respond fast. In rare cases (especially late at night), delivery may take up to a few hours — but we always deliver before the next morning. You'll receive your access credentials directly on Messenger.</p>
+                  </div>
+               </div>
+               <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                     <span>💳 What payment methods are accepted?</span>
+                     <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                     <p>We currently accept GCash as our primary payment method. It's fast, secure, and widely available in the Philippines. Once you place your order via the form or Messenger, we'll send you our GCash number. Payment is only required after we confirm your order details — no advance payment with no confirmation.</p>
+                  </div>
+               </div>
+               <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                     <span>🔄 What if my access stops working? Is there a replacement?</span>
+                     <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                     <p>Absolutely! If your access stops working during your subscription period, just message us on Messenger and we will replace it immediately at no extra cost. Replacements are part of our service guarantee. We stand behind every order we deliver — your subscription will be honored for the full duration you paid for.</p>
+                  </div>
+               </div>
+               <div class="faq-item">
+                  <div class="faq-question" onclick="toggleFaq(this)">
+                     <span>📱 How do I place an order?</span>
+                     <span class="faq-icon">+</span>
+                  </div>
+                  <div class="faq-answer">
+                     <p>It's simple! Fill out the order form on this page (choose your service, duration, and account type), then click "Send Order via Messenger." You'll be redirected to our Facebook Messenger with your order details already filled in. We'll confirm the order, send our GCash number, and deliver your access right after payment. The whole process usually takes under 10 minutes!</p>
                   </div>
                </div>
             </div>
@@ -1263,31 +1269,19 @@
             <div class="contact-grid fade-in">
                <a class="contact-card" href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank">
                   <span class="contact-icon">💬</span>
-                  <div>
-                     <div class="contact-label">Facebook Messenger</div>
-                     <div class="contact-val">@Jia Premiums</div>
-                  </div>
+                  <div><div class="contact-label">Facebook Messenger</div><div class="contact-val">@Jia Premiums</div></div>
                </a>
                <a class="contact-card" href="https://www.facebook.com/YOUR_FB_PAGE" target="_blank">
                   <span class="contact-icon">📘</span>
-                  <div>
-                     <div class="contact-label">Facebook Page</div>
-                     <div class="contact-val">JIA Premiums</div>
-                  </div>
+                  <div><div class="contact-label">Facebook Page</div><div class="contact-val">JIA Premiums</div></div>
                </a>
                <a class="contact-card" href="mailto:jiapremiums@gmail.com">
                   <span class="contact-icon">✉️</span>
-                  <div>
-                     <div class="contact-label">Email</div>
-                     <div class="contact-val">jiapremiums@gmail.com</div>
-                  </div>
+                  <div><div class="contact-label">Email</div><div class="contact-val">jiapremiums@gmail.com</div></div>
                </a>
                <a class="contact-card" href="#">
                   <span class="contact-icon">🌐</span>
-                  <div>
-                     <div class="contact-label">Website</div>
-                     <div class="contact-val">jia-premiums.vercel.app</div>
-                  </div>
+                  <div><div class="contact-label">Website</div><div class="contact-val">jia-premiums.vercel.app</div></div>
                </a>
             </div>
          </div>
@@ -1303,71 +1297,103 @@
                   <a href="#order">Order Form</a>
                   <a href="#how">How It Works</a>
                   <a href="#reviews">Reviews</a>
+                  <a href="#faq">FAQ</a>
                </div>
                <p class="footer-copy">© 2026 JIA Premiums. Affordable Premiums. Trusted Access. Instant Delivery.</p>
             </div>
          </div>
       </footer>
       <script>
-         // ── YOUR MESSENGER PAGE ID ──
-         const FB_PAGE_ID = 'YOUR_PAGE_ID'; // Replace with actual ID
-         
          // ── SERVICES DATA ──
          const SERVICES = [
-           // Streaming
-           { name:'Netflix',      cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'<img src="netflix.png" class="brand-logo" alt="Netflix">', pricing:{ 1:{solo1:99,solo2:179,shared:99},   3:{solo1:289,solo2:449,shared:289},  6:{solo1:499,solo2:699,shared:499},  12:{solo1:899,solo2:1199,shared:899} } },
-           { name:'Disney+',      cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'<img src="disney.png" class="brand-logo" alt="Disney+">', pricing:{ 1:{solo1:109,solo2:169,shared:109}, 3:{solo1:279,solo2:439,shared:279},  6:{solo1:489,solo2:699,shared:489},  12:{solo1:899,solo2:1199,shared:899} } },
-           { name:'Prime Video',  cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'<img src="primevideo.png" class="brand-logo" alt="Prime Video">', pricing:{ 1:{shared6:120},                   3:{shared6:299},                    6:{shared6:599},                    12:{shared6:1099} } },
-           { name:'HBO Max',      cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'<img src="hbomax.png" class="brand-logo" alt="HBO Max">', pricing:{ 1:{solo1:99,shared6:249},           3:{solo1:259,shared6:599},          6:{solo1:399,shared6:1499},         12:{solo1:899} } },
-           { name:'Loklok',       cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'📺', pricing:{ 1:{solo1:99,shared3:149},          3:{solo1:229,shared3:599},          6:{solo1:379,shared3:999},          12:{solo1:799} } },
-           { name:'Viu',          cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'🌐', pricing:{ 1:{shared:139},                    3:{shared:379},                     6:{shared:649},                     12:{shared:1099} } },
-           { name:'Vivamax',      cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'🎞️', pricing:{ 1:{solo1:99,shared5:149},          3:{solo1:229,shared5:349},          6:{solo1:379,shared5:599},          12:{solo1:799} } },
-           { name:'Viva One',     cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'🎭', pricing:{ 1:{solo1:99,shared5:149},          3:{solo1:229,shared5:349},          6:{solo1:379,shared5:599},          12:{solo1:799} } },
-           { name:'iQIYI',        cat:'<img src="netflix.png" class="brand-logo" alt="Netflix"> Streaming',   icon:'📱', pricing:{ 1:{shared:139},                    3:{shared:379},                     6:{shared:649},                     12:{shared:1099} } },
-           // Music
-           { name:'Spotify',      cat:'<img src="spotify.png" class="brand-logo" alt="Spotify"> Music',       icon:'<img src="spotify.png" class="brand-logo" alt="Spotify">', pricing:{ 1:{solo1:65,solo2:65,shared:65},   6:{solo1:399,solo2:399,shared:399}, 12:{solo1:799,solo2:799,shared:799} } },
-           { name:'YouTube',      cat:'<img src="spotify.png" class="brand-logo" alt="Spotify"> Music',       icon:'<img src="youtube.png" class="brand-logo" alt="YouTube">', pricing:{ 1:{solo1:49,shared6:80},           3:{solo1:179,shared6:230},          6:{solo1:399,shared6:400},          12:{solo1:899} } },
-           { name:'iWantTFC',     cat:'<img src="spotify.png" class="brand-logo" alt="Spotify"> Music',       icon:'🎶', pricing:{ 1:{shared6:120},                   3:{shared6:299},                    6:{shared6:599},                    12:{shared6:1099} } },
-           // Design / AI
-           { name:'Canva',        cat:'🎨 Design',      icon:'<img src="canva.png" class="brand-logo" alt="Canva">', pricing:{ 1:{shared:50},                     12:{shared:399} } },
-           { name:'CapCut',       cat:'🎨 Design',      icon:'<img src="capcut.png" class="brand-logo" alt="CapCut">', pricing:{ 1:{shared:150},                    3:{shared:399},                     6:{shared:699},                     12:{shared:1199} } },
-           { name:'ChatGPT Plus', cat:'🤖 AI',          icon:'🤖', pricing:{ 1:{solo1:180,shared5:880},          3:{solo1:499,shared5:2399},         6:{solo1:899},                      12:{solo1:1599} } },
-           { name:'ChatGPT Go',   cat:'🤖 AI',          icon:'💡', pricing:{ 1:{shared6:249},                   3:{shared6:699},                    6:{shared6:1299},                   12:{shared6:2299} } },
-           { name:'Grammarly',    cat:'✍️ Writing',     icon:'<img src="grammarly.png" class="brand-logo" alt="Grammarly">', pricing:{ 1:{solo1:50,shared:50},            3:{solo1:129,shared:129},           6:{solo1:229,shared:229},           12:{solo1:399,shared:399} } },
-           // AI Tools
-           { name:'Jenni AI',     cat:'📚 Research',    icon:'✍️', pricing:{} },
-           { name:'Paperpal',     cat:'📚 Research',    icon:'📄', pricing:{} },
-           { name:'Elicit AI',    cat:'📚 Research',    icon:'🔬', pricing:{} },
-           { name:'SciSpace',     cat:'📚 Research',    icon:'🚀', pricing:{} },
-           { name:'AnswerThis',   cat:'📚 Research',    icon:'💬', pricing:{} },
-           { name:'Consensus',    cat:'📚 Research',    icon:'📊', pricing:{} },
-           { name:'StealthWriter AI', cat:'🛡️ AI Humanization', icon:'👻', pricing:{} },
-           { name:'WriteHuman AI',    cat:'🛡️ AI Humanization', icon:'🖊️', pricing:{} },
-           { name:'AIUndetect AI',    cat:'🛡️ AI Humanization', icon:'🛡️', pricing:{} },
-           { name:'Undetectable AI',  cat:'🛡️ AI Humanization', icon:'🔒', pricing:{} },
-           { name:'StealthGPT AI',    cat:'🛡️ AI Humanization', icon:'🥷', pricing:{} },
-           { name:'Originality AI',   cat:'🛡️ AI Humanization', icon:'✅', pricing:{} },
-           { name:'Gizmo AI',     cat:'🎓 Study',       icon:'🃏', pricing:{} },
-           { name:'Brainscape',   cat:'🎓 Study',       icon:'🧠', pricing:{} },
-           { name:'NoteGPT IO',   cat:'🎓 Study',       icon:'📓', pricing:{} },
-           { name:'TurboLearn AI',cat:'🎓 Study',       icon:'⚡', pricing:{} },
-           { name:'ChatPDF AI',   cat:'🎓 Study',       icon:'💬', pricing:{} },
-           { name:'Genially',     cat:'🎨 Content',     icon:'🎪', pricing:{} },
-           { name:'Gamma App',    cat:'🎨 Content',     icon:'🎴', pricing:{} },
-           { name:'OpenArt AI',   cat:'🎨 Content',     icon:'🎨', pricing:{} },
-           { name:'Figma Pro',    cat:'🎨 Content',     icon:'🖥️', pricing:{} },
-           { name:'Krisp AI',     cat:'⚡ Productivity', icon:'🔇', pricing:{} },
-           { name:'Otter AI',     cat:'⚡ Productivity', icon:'🦦', pricing:{} },
-           { name:'Notion',       cat:'⚡ Productivity', icon:'📋', pricing:{} },
-           { name:'Moises AI',    cat:'⚡ Productivity', icon:'<img src="spotify.png" class="brand-logo" alt="Spotify">', pricing:{} },
-           { name:'JustDone AI',  cat:'✍️ AI Writing',  icon:'✍️', pricing:{} },
-           { name:'Sidekicker AI',cat:'✍️ AI Writing',  icon:'🦸', pricing:{} },
-           { name:'WriteLess AI', cat:'✍️ AI Writing',  icon:'<img src="grammarly.png" class="brand-logo" alt="Grammarly">', pricing:{} },
+           { name:'Netflix',      cat:'Streaming',   icon:'🎬', pricing:{ 1:{solo1:99,solo2:179,shared:99},   3:{solo1:289,solo2:449,shared:289},  6:{solo1:499,solo2:699,shared:499},  12:{solo1:899,solo2:1199,shared:899} }, types:['solo1','solo2','shared'] },
+           { name:'Disney+',      cat:'Streaming',   icon:'🏰', pricing:{ 1:{solo1:109,solo2:169,shared:109}, 3:{solo1:279,solo2:439,shared:279},  6:{solo1:489,solo2:699,shared:489},  12:{solo1:899,solo2:1199,shared:899} }, types:['solo1','solo2','shared'] },
+           { name:'Prime Video',  cat:'Streaming',   icon:'📦', pricing:{ 1:{shared6:120},3:{shared6:299},6:{shared6:599},12:{shared6:1099} }, types:['shared6'] },
+           { name:'HBO Max',      cat:'Streaming',   icon:'🎭', pricing:{ 1:{solo1:99,shared6:249},3:{solo1:259,shared6:599},6:{solo1:399,shared6:1499},12:{solo1:899} }, types:['solo1','shared6'] },
+           { name:'Loklok',       cat:'Streaming',   icon:'📺', pricing:{ 1:{solo1:99,shared3:149},3:{solo1:229,shared3:599},6:{solo1:379,shared3:999},12:{solo1:799} }, types:['solo1','shared3'] },
+           { name:'Viu',          cat:'Streaming',   icon:'🌐', pricing:{ 1:{shared:139},3:{shared:379},6:{shared:649},12:{shared:1099} }, types:['shared'] },
+           { name:'Vivamax',      cat:'Streaming',   icon:'🎞️', pricing:{ 1:{solo1:99,shared5:149},3:{solo1:229,shared5:349},6:{solo1:379,shared5:599},12:{solo1:799} }, types:['solo1','shared5'] },
+           { name:'Viva One',     cat:'Streaming',   icon:'🎭', pricing:{ 1:{solo1:99,shared5:149},3:{solo1:229,shared5:349},6:{solo1:379,shared5:599},12:{solo1:799} }, types:['solo1','shared5'] },
+           { name:'iQIYI',        cat:'Streaming',   icon:'📱', pricing:{ 1:{shared:139},3:{shared:379},6:{shared:649},12:{shared:1099} }, types:['shared'] },
+           { name:'Spotify',      cat:'Music',       icon:'🎵', pricing:{ 1:{solo1:65,solo2:65,shared:65},6:{solo1:399,solo2:399,shared:399},12:{solo1:799,solo2:799,shared:799} }, types:['solo1','solo2','shared'] },
+           { name:'YouTube',      cat:'Music',       icon:'▶️', pricing:{ 1:{solo1:49,shared6:80},3:{solo1:179,shared6:230},6:{solo1:399,shared6:400},12:{solo1:899} }, types:['solo1','shared6'] },
+           { name:'iWantTFC',     cat:'Music',       icon:'🎶', pricing:{ 1:{shared6:120},3:{shared6:299},6:{shared6:599},12:{shared6:1099} }, types:['shared6'] },
+           { name:'Canva',        cat:'Design',      icon:'🎨', pricing:{ 1:{shared:50},12:{shared:399} }, types:['shared'] },
+           { name:'CapCut',       cat:'Design',      icon:'✂️', pricing:{ 1:{shared:150},3:{shared:399},6:{shared:699},12:{shared:1199} }, types:['shared'] },
+           { name:'ChatGPT Plus', cat:'AI',          icon:'🤖', pricing:{ 1:{solo1:180,shared5:880},3:{solo1:499,shared5:2399},6:{solo1:899},12:{solo1:1599} }, types:['solo1','shared5'] },
+           { name:'ChatGPT Go',   cat:'AI',          icon:'💡', pricing:{ 1:{shared6:249},3:{shared6:699},6:{shared6:1299},12:{shared6:2299} }, types:['shared6'] },
+           { name:'Grammarly',    cat:'Writing',     icon:'✍️', pricing:{ 1:{solo1:50,shared:50},3:{solo1:129,shared:129},6:{solo1:229,shared:229},12:{solo1:399,shared:399} }, types:['solo1','shared'] },
+           { name:'Jenni AI',     cat:'Research',    icon:'📝', pricing:{}, types:[] },
+           { name:'Paperpal',     cat:'Research',    icon:'📄', pricing:{}, types:[] },
+           { name:'Elicit AI',    cat:'Research',    icon:'🔬', pricing:{}, types:[] },
+           { name:'SciSpace',     cat:'Research',    icon:'🚀', pricing:{}, types:[] },
+           { name:'AnswerThis',   cat:'Research',    icon:'💬', pricing:{}, types:[] },
+           { name:'Consensus',    cat:'Research',    icon:'📊', pricing:{}, types:[] },
+           { name:'StealthWriter AI', cat:'AI Humanization', icon:'👻', pricing:{}, types:[] },
+           { name:'WriteHuman AI',    cat:'AI Humanization', icon:'🖊️', pricing:{}, types:[] },
+           { name:'AIUndetect AI',    cat:'AI Humanization', icon:'🛡️', pricing:{}, types:[] },
+           { name:'Undetectable AI',  cat:'AI Humanization', icon:'🔒', pricing:{}, types:[] },
+           { name:'StealthGPT AI',    cat:'AI Humanization', icon:'🥷', pricing:{}, types:[] },
+           { name:'Originality AI',   cat:'AI Humanization', icon:'✅', pricing:{}, types:[] },
+           { name:'Gizmo AI',     cat:'Study',       icon:'🃏', pricing:{}, types:[] },
+           { name:'Brainscape',   cat:'Study',       icon:'🧠', pricing:{}, types:[] },
+           { name:'NoteGPT IO',   cat:'Study',       icon:'📓', pricing:{}, types:[] },
+           { name:'TurboLearn AI',cat:'Study',       icon:'⚡', pricing:{}, types:[] },
+           { name:'ChatPDF AI',   cat:'Study',       icon:'💬', pricing:{}, types:[] },
+           { name:'Genially',     cat:'Content',     icon:'🎪', pricing:{}, types:[] },
+           { name:'Gamma App',    cat:'Content',     icon:'🎴', pricing:{}, types:[] },
+           { name:'OpenArt AI',   cat:'Content',     icon:'🎨', pricing:{}, types:[] },
+           { name:'Figma Pro',    cat:'Content',     icon:'🖥️', pricing:{}, types:[] },
+           { name:'Krisp AI',     cat:'Productivity',icon:'🔇', pricing:{}, types:[] },
+           { name:'Otter AI',     cat:'Productivity',icon:'🦦', pricing:{}, types:[] },
+           { name:'Notion',       cat:'Productivity',icon:'📋', pricing:{}, types:[] },
+           { name:'Moises AI',    cat:'Productivity',icon:'🎵', pricing:{}, types:[] },
+           { name:'JustDone AI',  cat:'AI Writing',  icon:'✍️', pricing:{}, types:[] },
+           { name:'Sidekicker AI',cat:'AI Writing',  icon:'🦸', pricing:{}, types:[] },
+           { name:'WriteLess AI', cat:'AI Writing',  icon:'📝', pricing:{}, types:[] },
          ];
-         
+
          const DURATION_LABELS = { '1':'1 Month','3':'3 Months','6':'6 Months','12':'12 Months (1 Year)' };
          const TYPE_LABELS = { solo1:'Solo Account (1 Screen)',solo2:'Solo Profile (2 Screens)',shared:'Shared Account (1 Screen)',shared3:'Shared Account (3 Screens)',shared5:'Shared Account (5 Screens)',shared6:'Shared Account (6 Screens)' };
-         
+         const ALL_TYPES = ['solo1','solo2','shared','shared3','shared5','shared6'];
+
+         // ── ORDER PRODUCT (from card click) ──
+         function orderProduct(serviceName) {
+           // Scroll to order form
+           document.getElementById('order').scrollIntoView({ behavior: 'smooth', block: 'start' });
+           // Set the service after scroll
+           setTimeout(() => {
+             const searchInput = document.getElementById('serviceSearch');
+             const hiddenService = document.getElementById('selectedService');
+             searchInput.value = serviceName;
+             hiddenService.value = serviceName;
+             dropdown.style.display = 'none';
+             updateAccountTypeOptions(serviceName);
+             updatePreview();
+             searchInput.focus();
+           }, 600);
+         }
+
+         // ── DYNAMIC ACCOUNT TYPE ──
+         function updateAccountTypeOptions(serviceName) {
+           const svc = SERVICES.find(s => s.name === serviceName);
+           const sel = document.getElementById('accountType');
+           const currentVal = sel.value;
+           sel.innerHTML = '<option value="">— Select Type —</option>';
+
+           const typesToShow = (svc && svc.types && svc.types.length > 0) ? svc.types : ALL_TYPES;
+           typesToShow.forEach(t => {
+             const opt = document.createElement('option');
+             opt.value = t;
+             opt.textContent = TYPE_LABELS[t];
+             sel.appendChild(opt);
+           });
+
+           // Restore value if still valid
+           if (typesToShow.includes(currentVal)) sel.value = currentVal;
+           else sel.value = '';
+         }
+
          // ── COUNTDOWN ──
          function updateCountdown() {
            const end = new Date(); end.setHours(23,59,59,999);
@@ -1378,7 +1404,7 @@
            document.getElementById('countdown').textContent = `${h}:${m}:${s}`;
          }
          updateCountdown(); setInterval(updateCountdown,1000);
-         
+
          // ── LIVE TRUST SIMULATION ──
          const LAST_ORDERS = ['Netflix 1 Screen','Disney+ 1 Screen','ChatGPT Plus','Canva Pro','Spotify','HBO Max','YouTube Premium','Grammarly','Vivamax','CapCut'];
          let liveOrderCount = 24, liveViewerCount = 18;
@@ -1392,7 +1418,7 @@
            document.getElementById('lastOrderTime').textContent = Math.floor(Math.random()*9)+1;
          }
          setInterval(updateLive, 7000);
-         
+
          // ── PARTICLES ──
          (function(){
            const container = document.getElementById('particles');
@@ -1408,13 +1434,21 @@
              container.appendChild(p);
            }
          })();
-         
-         // ── MOBILE MENU ──
+
+         // ── MOBILE MENU — IMPROVED ──
          const menuBtn = document.getElementById('menuBtn');
          const mobileMenu = document.getElementById('mobileMenu');
-         menuBtn.addEventListener('click',()=>mobileMenu.classList.toggle('open'));
-         function closeMenu(){mobileMenu.classList.remove('open');}
-         
+         menuBtn.addEventListener('click', () => {
+           const isOpen = mobileMenu.classList.toggle('open');
+           menuBtn.classList.toggle('open', isOpen);
+           document.body.style.overflow = isOpen ? 'hidden' : '';
+         });
+         function closeMenu() {
+           mobileMenu.classList.remove('open');
+           menuBtn.classList.remove('open');
+           document.body.style.overflow = '';
+         }
+
          // ── AI FILTER ──
          document.querySelectorAll('.ai-filter-btn').forEach(btn=>{
            btn.addEventListener('click',()=>{
@@ -1424,30 +1458,31 @@
              document.querySelectorAll('#aiGrid .ai-card').forEach(c=>{ c.style.display=(f==='all'||c.dataset.category===f)?'':'none'; });
            });
          });
-         
+
          // ── SERVICE SEARCH ──
          const searchInput = document.getElementById('serviceSearch');
          const dropdown = document.getElementById('serviceDropdown');
          const hiddenService = document.getElementById('selectedService');
-         
+
          searchInput.addEventListener('input',()=>{
            const q = searchInput.value.trim().toLowerCase();
-           if(!q){ dropdown.style.display='none'; hiddenService.value=''; return; }
+           if(!q){ dropdown.style.display='none'; hiddenService.value=''; updateAccountTypeOptions(null); return; }
            const matches = SERVICES.filter(s=>s.name.toLowerCase().includes(q)||s.cat.toLowerCase().includes(q));
            if(!matches.length){ dropdown.style.display='none'; return; }
            dropdown.innerHTML = matches.map(s=>`<div class="dd-item" onclick="selectService('${s.name}')"><span>${s.icon}</span><span>${s.name}</span><span class="dd-cat">${s.cat}</span></div>`).join('');
            dropdown.style.display='block';
          });
-         
+
          function selectService(name){
            searchInput.value = name;
            hiddenService.value = name;
            dropdown.style.display='none';
+           updateAccountTypeOptions(name);
            updatePreview();
          }
-         
+
          document.addEventListener('click',e=>{ if(!e.target.closest('.search-wrapper')) dropdown.style.display='none'; });
-         
+
          // ── ORDER PREVIEW ──
          function getPrice(){
            const svcName = hiddenService.value;
@@ -1458,7 +1493,7 @@
            if(!svc||!svc.pricing[dur]) return null;
            return svc.pricing[dur][type] || null;
          }
-         
+
          function updatePreview(){
            const name = document.getElementById('fname').value.trim();
            const svc = hiddenService.value;
@@ -1474,12 +1509,12 @@
            const price = getPrice();
            document.getElementById('previewPrice').textContent = price ? '₱'+price.toLocaleString() : '';
          }
-         
+
          ['fname','duration','accountType','notes'].forEach(id=>{
            document.getElementById(id).addEventListener('change',updatePreview);
            document.getElementById(id).addEventListener('input',updatePreview);
          });
-         
+
          // ── SUBMIT ──
          function submitOrder(){
            const name = document.getElementById('fname').value.trim();
@@ -1494,45 +1529,77 @@
            }
            const price = getPrice();
            const priceText = price ? ` | Price: ₱${price.toLocaleString()}` : '';
-           const msg = `Hi JIA Premiums!
+           const msg = `Hi JIA Premiums!\n\n━━━━━━━━━━━━━━\nORDER DETAILS\n━━━━━━━━━━━━━━\n\n• Name: ${name}\n• Messenger: ${fb}\n• Service: ${svc}\n• Duration: ${DURATION_LABELS[dur]}\n• Type: ${TYPE_LABELS[type]}${priceText}\n\n• Notes:\n${notes || 'None'}\n\n━━━━━━━━━━━━━━\n\nI'd like to place this order.\nPlease send GCash details.\nThank you!`;
+           const encodedMsg = encodeURIComponent(msg);
+           const THREAD_ID = "8804469352978840";
+           const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+           if (isMobile) {
+             window.location.href = `https://m.me/${THREAD_ID}?text=${encodedMsg}`;
+           } else {
+             window.open(`https://www.facebook.com/messages/e2ee/t/${THREAD_ID}?text=${encodedMsg}`, '_blank');
+           }
+         }
 
-━━━━━━━━━━━━━━
-ORDER DETAILS
-━━━━━━━━━━━━━━
+         // ── PROOF CAROUSEL ──
+         (function() {
+           const track = document.getElementById('proofTrack');
+           const dotsContainer = document.getElementById('proofDots');
+           const cards = track.querySelectorAll('.proof-card');
+           const total = cards.length;
+           let current = 0;
+           let autoTimer;
 
-• Name: ${name}
-• Messenger: ${fb}
-• Service: ${svc}
-• Duration: ${DURATION_LABELS[dur]}
-• Type: ${TYPE_LABELS[type]}${priceText}
+           // Build dots
+           for(let i=0;i<total;i++){
+             const dot = document.createElement('button');
+             dot.className = 'carousel-dot' + (i===0?' active':'');
+             dot.setAttribute('aria-label', `Go to slide ${i+1}`);
+             dot.addEventListener('click', ()=>goTo(i));
+             dotsContainer.appendChild(dot);
+           }
 
-• Notes:
-${notes || 'None'}
+           function getVisible() {
+             const w = track.parentElement.offsetWidth;
+             if(w < 320) return 1;
+             if(w < 620) return 1.5;
+             if(w < 900) return 2.5;
+             return 3.5;
+           }
 
-━━━━━━━━━━━━━━
+           function goTo(idx) {
+             current = Math.max(0, Math.min(idx, total-1));
+             const cardW = cards[0].offsetWidth + 16;
+             track.style.transform = `translateX(-${current * cardW}px)`;
+             dotsContainer.querySelectorAll('.carousel-dot').forEach((d,i)=>d.classList.toggle('active', i===current));
+           }
 
-I'd like to place this order.
-Please send GCash details.
-Thank you!`;
-const encodedMsg = encodeURIComponent(msg);
-const THREAD_ID = "8804469352978840";
+           document.getElementById('proofPrev').addEventListener('click',()=>{ clearInterval(autoTimer); goTo(current>0?current-1:total-1); startAuto(); });
+           document.getElementById('proofNext').addEventListener('click',()=>{ clearInterval(autoTimer); goTo(current<total-1?current+1:0); startAuto(); });
 
-// detect mobile
-const isMobile =
-/Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+           function startAuto() {
+             autoTimer = setInterval(()=>goTo(current<total-1?current+1:0), 4000);
+           }
+           startAuto();
 
-if (isMobile) {
-    // PHONE → opens Messenger app/browser
-    window.location.href =
-      `https://m.me/${THREAD_ID}?text=${encodedMsg}`;
-} else {
-    // PC/LAPTOP
-    window.open(
-      `https://www.facebook.com/messages/e2ee/t/${THREAD_ID}?text=${encodedMsg}`,
-      '_blank'
-    );
-}
-}
+           // Touch swipe
+           let startX=0;
+           track.addEventListener('touchstart', e=>{ startX=e.touches[0].clientX; }, {passive:true});
+           track.addEventListener('touchend', e=>{
+             const diff = startX - e.changedTouches[0].clientX;
+             if(Math.abs(diff)>40){ clearInterval(autoTimer); goTo(diff>0?current+1:current-1); startAuto(); }
+           }, {passive:true});
+         })();
+
+         // ── FAQ ACCORDION ──
+         function toggleFaq(questionEl) {
+           const item = questionEl.parentElement;
+           const isOpen = item.classList.contains('open');
+           // Close all
+           document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+           // Toggle current
+           if(!isOpen) item.classList.add('open');
+         }
+
          // ── SCROLL FADE ──
          const obs = new IntersectionObserver(entries=>{
            entries.forEach(e=>{ if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target);} });
