@@ -876,7 +876,7 @@
                   <div class="unlisted-icon">👀</div>
                   <div class="unlisted-title">Hindi Mo Nakita?</div>
                   <p class="unlisted-sub">May hinahanap ka na wala sa listahan? Message us — we'll check availability and rates!</p>
-                  <a class="product-cta" href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank">Chat with Us →</a>
+                  <a class="product-cta" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">Chat with Us →</a>
                </div>
             </div>
             <div style="text-align:center;margin-top:72px;" class="fade-in">
@@ -1268,14 +1268,14 @@
                <p class="section-sub">Reach out through any channel below. We respond fast and deliver even faster.</p>
             </div>
             <div style="text-align:center;margin-bottom:32px;" class="fade-in">
-               <a class="btn-primary" href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank">💬 Message Us Now →</a>
+               <a class="btn-primary" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">💬 Message Us Now →</a>
             </div>
             <div class="contact-grid fade-in">
-               <a class="contact-card" href="https://www.facebook.com/messages/e2ee/t/8804469352978840" target="_blank">
+               <a class="contact-card" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">
                   <span class="contact-icon">💬</span>
                   <div><div class="contact-label">Facebook Messenger</div><div class="contact-val">@Jia Premiums</div></div>
                </a>
-               <a class="contact-card" href="https://www.facebook.com/YOUR_FB_PAGE" target="_blank">
+               <a class="contact-card" href="https://www.facebook.com/profile.php?id=61591073026036" target="_blank">
                   <span class="contact-icon">📘</span>
                   <div><div class="contact-label">Facebook Page</div><div class="contact-val">JIA Premiums</div></div>
                </a>
@@ -1535,13 +1535,8 @@
            const priceText = price ? ` | Price: ₱${price.toLocaleString()}` : '';
            const msg = `Hi JIA Premiums!\n\n━━━━━━━━━━━━━━\nORDER DETAILS\n━━━━━━━━━━━━━━\n\n• Name: ${name}\n• Messenger: ${fb}\n• Service: ${svc}\n• Duration: ${DURATION_LABELS[dur]}\n• Type: ${TYPE_LABELS[type]}${priceText}\n\n• Notes:\n${notes || 'None'}\n\n━━━━━━━━━━━━━━\n\nI'd like to place this order.\nPlease send GCash details.\nThank you!`;
            const encodedMsg = encodeURIComponent(msg);
-           const THREAD_ID = "8804469352978840";
-           const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
-           if (isMobile) {
-             window.location.href = `https://m.me/${THREAD_ID}?text=${encodedMsg}`;
-           } else {
-             window.open(`https://www.facebook.com/messages/e2ee/t/${THREAD_ID}?text=${encodedMsg}`, '_blank');
-           }
+           const PAGE_ID = "1226740227182391";
+           window.open(`https://m.me/${PAGE_ID}?text=${encodedMsg}`, '_blank');
          }
 
          // ── PROOF CAROUSEL ──
