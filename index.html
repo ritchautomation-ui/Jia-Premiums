@@ -472,6 +472,24 @@
          .fade-in { opacity: 0; transform: translateY(24px); transition: opacity .6s ease,transform .6s ease; }
          .fade-in.visible { opacity: 1; transform: translateY(0); }
 
+         /* ORDER FORM — EMPTY STATE, BADGES, COPY, TOAST */
+         .order-empty-state { display: flex; align-items: center; gap: 10px; background: rgba(248,244,255,0.04); border: 1px dashed var(--navy-border); border-radius: 12px; padding: 16px 18px; font-size: 13px; color: var(--pearl-dim); margin-bottom: 24px; }
+         .product-badge.bestseller { background: rgba(245,200,66,0.14); color: var(--gold); border-color: rgba(245,200,66,0.3); }
+         .product-badge.popular { background: rgba(233,30,140,0.12); color: #f472b6; border-color: rgba(233,30,140,0.25); }
+         .product-badge.limited { background: rgba(239,68,68,0.14); color: #f87171; border-color: rgba(239,68,68,0.28); }
+         .product-badge-row { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; }
+         .copy-summary-btn { width: 100%; margin-top: 14px; padding: 10px; border-radius: 8px; border: 1.5px solid rgba(124,58,237,0.3); background: rgba(124,58,237,0.08); color: var(--pearl); font-size: 13px; font-weight: 700; cursor: pointer; transition: all var(--t); }
+         .copy-summary-btn:hover { background: rgba(124,58,237,0.16); border-color: var(--violet); }
+         .copy-summary-btn:active { transform: scale(0.98); }
+         .toast { position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%) translateY(20px); background: var(--navy-card); border: 1.5px solid rgba(34,197,94,0.4); color: var(--pearl); padding: 12px 20px; border-radius: 50px; font-size: 13px; font-weight: 700; box-shadow: 0 12px 32px rgba(0,0,0,0.5); z-index: 99999; opacity: 0; pointer-events: none; transition: opacity .3s ease, transform .3s ease; display: flex; align-items: center; gap: 8px; }
+         .toast.error { border-color: rgba(233,30,140,0.5); }
+         .toast.visible { opacity: 1; transform: translateX(-50%) translateY(0); }
+         .no-results { padding: 16px; font-size: 13px; color: var(--pearl-dim); text-align: center; }
+
+         @media (prefers-reduced-motion: reduce) {
+           *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+         }
+
          /* UNLISTED */
          .unlisted-card { background: var(--navy-card); border: 1.5px dashed rgba(124,58,237,0.3); border-radius: var(--radius); padding: 32px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
          .unlisted-icon { font-size: 36px; }
@@ -691,9 +709,9 @@
                <p class="section-sub">Premium video streaming at unbeatable prices. Multiple screens available.</p>
             </div>
             <div class="product-grid fade-in">
-               <div class="product-card">
+               <div class="product-card" data-service="Netflix">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="netflix.png" class="brand-logo" alt="Netflix"></div>
+                     <div class="product-icon-wrap"><img src="netflix.png" class="brand-logo" alt="Netflix" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Streaming</span>
                   </div>
                   <div class="product-name">NETFLIX</div>
@@ -701,9 +719,9 @@
                   <div class="product-pricing">1 Screen: ₱99/mo • ₱179/3mo • ₱499/6mo • ₱899/yr<br>2 Screens: ₱179/mo • ₱449/3mo • ₱699/6mo • ₱1,199/yr</div>
                   <button class="product-cta" onclick="orderProduct('Netflix')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Disney+">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="disney.png" class="brand-logo" alt="Disney+"></div>
+                     <div class="product-icon-wrap"><img src="disney.png" class="brand-logo" alt="Disney+" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Streaming</span>
                   </div>
                   <div class="product-name">DISNEY+</div>
@@ -711,9 +729,9 @@
                   <div class="product-pricing">1 Screen: ₱109/mo • ₱279/3mo • ₱489/6mo • ₱899/yr<br>2 Screens: ₱169/mo • ₱439/3mo • ₱699/6mo • ₱1,199/yr</div>
                   <button class="product-cta" onclick="orderProduct('Disney+')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Prime Video">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="./primevideo.png" class="brand-logo" alt="Prime Video"></div>
+                     <div class="product-icon-wrap"><img src="./primevideo.png" class="brand-logo" alt="Prime Video" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Streaming</span>
                   </div>
                   <div class="product-name">PRIME VIDEO</div>
@@ -721,9 +739,9 @@
                   <div class="product-pricing">6 Screens: ₱120/mo · ₱299/3mo · ₱599/6mo · ₱1,099/yr</div>
                   <button class="product-cta" onclick="orderProduct('Prime Video')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="HBO Max">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="hbomax.png" class="brand-logo" alt="HBO Max"></div>
+                     <div class="product-icon-wrap"><img src="hbomax.png" class="brand-logo" alt="HBO Max" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Streaming</span>
                   </div>
                   <div class="product-name">HBO MAX</div>
@@ -731,7 +749,7 @@
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱259/3mo · ₱399/6mo · ₱899/yr<br/>6 Screens: ₱249/mo · ₱599/3mo · ₱1,499/6mo</div>
                   <button class="product-cta" onclick="orderProduct('HBO Max')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Loklok">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">📺</div>
                      <span class="product-badge">Streaming</span>
@@ -741,7 +759,7 @@
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱229/3mo · ₱379/6mo · ₱799/yr<br/>3 Screens: ₱149/mo · ₱599/3mo · ₱999/6mo</div>
                   <button class="product-cta" onclick="orderProduct('Loklok')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Viu">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">🌐</div>
                      <span class="product-badge">Streaming</span>
@@ -751,7 +769,7 @@
                   <div class="product-pricing">4 Devices: ₱139/mo · ₱379/3mo · ₱649/6mo · ₱1,099/yr</div>
                   <button class="product-cta" onclick="orderProduct('Viu')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Vivamax">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">🎞️</div>
                      <span class="product-badge">Streaming</span>
@@ -761,7 +779,7 @@
                   <div class="product-pricing">1 Screen: ₱99/mo · ₱229/3mo · ₱379/6mo · ₱799/yr<br/>5 Screens: ₱149/mo · ₱349/3mo · ₱599/6mo</div>
                   <button class="product-cta" onclick="orderProduct('Vivamax')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Viva One">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">🎭</div>
                      <span class="product-badge">Streaming</span>
@@ -779,9 +797,9 @@
                <p class="section-sub">Stream music and videos without ads at the lowest prices.</p>
             </div>
             <div class="product-grid fade-in">
-               <div class="product-card">
+               <div class="product-card" data-service="Spotify">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="spotify.png" class="brand-logo" alt="Spotify"></div>
+                     <div class="product-icon-wrap"><img src="spotify.png" class="brand-logo" alt="Spotify" loading="lazy" decoding="async"></div>
                      <span class="product-badge music">Music</span>
                   </div>
                   <div class="product-name">SPOTIFY</div>
@@ -789,9 +807,9 @@
                   <div class="product-pricing">1–3 Screens: ₱65/mo · ₱399/6mo · ₱799/yr</div>
                   <button class="product-cta" onclick="orderProduct('Spotify')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="YouTube">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="youtube.png" class="brand-logo" alt="YouTube"></div>
+                     <div class="product-icon-wrap"><img src="youtube.png" class="brand-logo" alt="YouTube" loading="lazy" decoding="async"></div>
                      <span class="product-badge music">Video &amp; Music</span>
                   </div>
                   <div class="product-name">YOUTUBE</div>
@@ -799,7 +817,7 @@
                   <div class="product-pricing">1 Screen: ₱49/mo · ₱179/3mo · ₱399/6mo · ₱899/yr<br/>6 Screens: ₱80/mo · ₱230/3mo · ₱400/6mo</div>
                   <button class="product-cta" onclick="orderProduct('YouTube')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="iWantTFC">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">🎶</div>
                      <span class="product-badge music">Music</span>
@@ -817,9 +835,9 @@
                <p class="section-sub">Design tools, AI writing assistants, and productivity apps — all at reseller rates.</p>
             </div>
             <div class="product-grid fade-in" id="productivity">
-               <div class="product-card">
+               <div class="product-card" data-service="Canva">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="canva.png" class="brand-logo" alt="Canva"></div>
+                     <div class="product-icon-wrap"><img src="canva.png" class="brand-logo" alt="Canva" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Design</span>
                   </div>
                   <div class="product-name">CANVA</div>
@@ -827,9 +845,9 @@
                   <div class="product-pricing">4 Devices: ₱50/mo · ₱399/yr</div>
                   <button class="product-cta" onclick="orderProduct('Canva')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="CapCut">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="capcut.png" class="brand-logo" alt="CapCut"></div>
+                     <div class="product-icon-wrap"><img src="capcut.png" class="brand-logo" alt="CapCut" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Design</span>
                   </div>
                   <div class="product-name">CAPCUT</div>
@@ -837,7 +855,7 @@
                   <div class="product-pricing">4 Devices: ₱150/mo · ₱399/3mo · ₱699/6mo · ₱1,199/yr</div>
                   <button class="product-cta" onclick="orderProduct('CapCut')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="ChatGPT Plus">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">🤖</div>
                      <span class="product-badge ai">AI</span>
@@ -847,7 +865,7 @@
                   <div class="product-pricing">1 Screen: ₱180/mo · ₱499/3mo · ₱899/6mo · ₱1,599/yr<br/>5 Screens: ₱880/mo · ₱2,399/3mo</div>
                   <button class="product-cta" onclick="orderProduct('ChatGPT Plus')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="ChatGPT Go">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">💡</div>
                      <span class="product-badge ai">AI</span>
@@ -857,9 +875,9 @@
                   <div class="product-pricing">6 Screens: ₱249/mo · ₱699/3mo · ₱1,299/6mo · ₱2,299/yr</div>
                   <button class="product-cta" onclick="orderProduct('ChatGPT Go')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="Grammarly">
                   <div class="product-card-header">
-                     <div class="product-icon-wrap"><img src="grammarly.png" class="brand-logo" alt="Grammarly"></div>
+                     <div class="product-icon-wrap"><img src="grammarly.png" class="brand-logo" alt="Grammarly" loading="lazy" decoding="async"></div>
                      <span class="product-badge">Writing</span>
                   </div>
                   <div class="product-name">GRAMMARLY</div>
@@ -867,7 +885,7 @@
                   <div class="product-pricing">1 Device/Shared: ₱50/mo · ₱129/3mo · ₱229/6mo · ₱399/yr</div>
                   <button class="product-cta" onclick="orderProduct('Grammarly')">Order Now →</button>
                </div>
-               <div class="product-card">
+               <div class="product-card" data-service="iQIYI">
                   <div class="product-card-header">
                      <div class="product-icon-wrap">📱</div>
                      <span class="product-badge">Streaming</span>
@@ -881,7 +899,7 @@
                   <div class="unlisted-icon">👀</div>
                   <div class="unlisted-title">Hindi Mo Nakita?</div>
                   <p class="unlisted-sub">May hinahanap ka na wala sa listahan? Message us — we'll check availability and rates!</p>
-                  <a class="product-cta" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">Chat with Us →</a>
+                  <a class="product-cta" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank" rel="noopener">Chat with Us →</a>
                </div>
             </div>
             <div style="text-align:center;margin-top:72px;" class="fade-in">
@@ -906,67 +924,88 @@
                <p class="section-sub">Fill out the form below and we'll send you the payment details on Messenger. GCash accepted.</p>
             </div>
             <div class="order-form-wrap fade-in">
-               <div class="form-row">
-                  <div class="form-group">
-                     <label class="form-label">👤 Full Name <span class="required">*</span></label>
-                     <input type="text" class="form-input" id="fname" placeholder="e.g. Juan dela Cruz" />
-                  </div>
-                  <div class="form-group">
-                     <label class="form-label">📱 Messenger Name <span class="required">*</span></label>
-                     <input type="text" class="form-input" id="fbname" placeholder="e.g. Juan DC" />
-                  </div>
-               </div>
                <div class="form-group">
                   <label class="form-label">🔍 Search Service <span class="required">*</span></label>
                   <div class="search-wrapper" style="position:relative;">
                      <span class="search-icon">🔍</span>
-                     <input type="text" class="form-input" id="serviceSearch" placeholder="Type to search... e.g. Netflix, ChatGPT, Canva" autocomplete="off" />
+                     <input type="text" class="form-input" id="serviceSearch" placeholder="Type to search... e.g. Netflix, ChatGPT, Canva" autocomplete="off" aria-expanded="false" role="combobox" />
                      <div id="serviceDropdown"></div>
                   </div>
                   <input type="hidden" id="selectedService" />
+                  <span class="field-error" id="serviceError">Please select a service.</span>
                </div>
                <div class="form-row">
                   <div class="form-group">
                      <label class="form-label">📅 Duration <span class="required">*</span></label>
                      <div class="select-wrapper">
-                        <select class="form-select" id="duration">
-                           <option value="">— Select Duration —</option>
-                           <option value="1">1 Month</option>
-                           <option value="3">3 Months</option>
-                           <option value="6">6 Months</option>
-                           <option value="12">12 Months (1 Year)</option>
+                        <select class="form-select" id="duration" disabled>
+                           <option value="">— Select a service first —</option>
                         </select>
                         <span class="select-arrow">▼</span>
                      </div>
+                     <span class="field-error" id="durationError">Please select a duration.</span>
                   </div>
                   <div class="form-group">
                      <label class="form-label">👥 Account Type <span class="required">*</span></label>
                      <div class="select-wrapper">
-                        <select class="form-select" id="accountType">
-                           <option value="">— Select Type —</option>
-                           <option value="solo1">Solo Account (1 Screen)</option>
-                           <option value="solo2">Solo Profile (2 Screens)</option>
-                           <option value="shared">Shared Account (1 Screen)</option>
-                           <option value="shared3">Shared Account (3 Screens)</option>
-                           <option value="shared5">Shared Account (5 Screens)</option>
-                           <option value="shared6">Shared Account (6 Screens)</option>
+                        <select class="form-select" id="accountType" disabled>
+                           <option value="">— Select a service first —</option>
                         </select>
                         <span class="select-arrow">▼</span>
                      </div>
+                     <span class="field-error" id="accountTypeError">Please select an account type.</span>
+                  </div>
+               </div>
+
+               <div class="order-empty-state" id="orderEmptyState">
+                  🛈 Select a service to view available plans and pricing.
+               </div>
+               <div class="order-preview" id="orderPreview">
+                  <div class="preview-title">📋 Order Summary</div>
+                  <div class="preview-row"><span class="label">Messenger Name</span><span class="value" id="previewName">—</span></div>
+                  <div class="preview-row"><span class="label">Phone Number</span><span class="value" id="previewPhone">—</span></div>
+                  <div class="preview-row"><span class="label">Source</span><span class="value" id="previewSource">—</span></div>
+                  <div class="preview-row"><span class="label">Service</span><span class="value" id="previewService">—</span></div>
+                  <div class="preview-row"><span class="label">Duration</span><span class="value" id="previewDuration">—</span></div>
+                  <div class="preview-row"><span class="label">Account Type</span><span class="value" id="previewType">—</span></div>
+                  <div class="preview-row" id="previewNotesRow" style="display:none;"><span class="label">Notes</span><span class="value" id="previewNotes">—</span></div>
+                  <div class="preview-price" id="previewPrice"></div>
+                  <button type="button" class="copy-summary-btn" id="copySummaryBtn" onclick="copyOrderSummary()">📋 Copy Order Summary</button>
+               </div>
+
+               <div class="form-row">
+                  <div class="form-group">
+                     <label class="form-label">📱 Messenger Name <span class="required">*</span></label>
+                     <input type="text" class="form-input" id="fbname" placeholder="e.g. Juan DC" autocomplete="name" />
+                     <span class="field-error" id="fbnameError">Please enter your Messenger name.</span>
+                  </div>
+                  <div class="form-group">
+                     <label class="form-label">☎️ Phone Number <span class="required">*</span></label>
+                     <input type="tel" class="form-input" id="phone" placeholder="e.g. 09XX XXX XXXX" autocomplete="tel" inputmode="tel" />
+                     <span class="field-error" id="phoneError">Please enter a valid phone number.</span>
+                  </div>
+               </div>
+               <div class="form-group">
+                  <label class="form-label">📍 How Did You Find Us? <span style="color:var(--pearl-dim);font-size:11px;font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
+                  <div class="select-wrapper">
+                     <select class="form-select" id="source">
+                        <option value="">— Select Source —</option>
+                        <option value="Facebook Page">Facebook Page</option>
+                        <option value="Facebook Group">Facebook Group</option>
+                        <option value="Website">Website</option>
+                        <option value="Referral">Referral</option>
+                        <option value="TikTok">TikTok</option>
+                        <option value="Friend">Friend</option>
+                        <option value="Other">Other</option>
+                     </select>
+                     <span class="select-arrow">▼</span>
                   </div>
                </div>
                <div class="form-group">
                   <label class="form-label"> Additional Notes <span style="color:var(--pearl-dim);font-size:11px;font-weight:500;text-transform:none;letter-spacing:0">(optional)</span></label>
                   <input type="text" class="form-input" id="notes" placeholder="Any special requests or questions?" />
                </div>
-               <div class="order-preview" id="orderPreview">
-                  <div class="preview-title">📋 Order Summary</div>
-                  <div class="preview-row"><span class="label">Name</span><span class="value" id="previewName">—</span></div>
-                  <div class="preview-row"><span class="label">Service</span><span class="value" id="previewService">—</span></div>
-                  <div class="preview-row"><span class="label">Duration</span><span class="value" id="previewDuration">—</span></div>
-                  <div class="preview-row"><span class="label">Account Type</span><span class="value" id="previewType">—</span></div>
-                  <div class="preview-price" id="previewPrice"></div>
-               </div>
+
                <button class="form-submit" id="submitBtn" onclick="submitOrder()">
                💬 Send Order via Messenger
                </button>
@@ -1037,25 +1076,19 @@
                <div class="how-card">
                   <span class="how-step-num">Step 01</span>
                   <div class="how-icon-wrap">📋</div>
-                  <div class="how-title">Fill the Form</div>
+                  <div class="how-title">Place Your Order</div>
                   <p class="how-desc">Use the order form above. Choose your service, duration, and account type — takes under a minute.</p>
                </div>
                <div class="how-card">
                   <span class="how-step-num">Step 02</span>
-                  <div class="how-icon-wrap">💬</div>
-                  <div class="how-title">We Get Notified</div>
-                  <p class="how-desc">Your order details are sent to our Messenger instantly. We respond fast — usually within minutes!</p>
+                  <div class="how-icon-wrap">💳</div>
+                  <div class="how-title">Confirm Payment</div>
+                  <p class="how-desc">We'll confirm your order on Messenger and send our GCash details. Fast, secure, hassle-free.</p>
                </div>
                <div class="how-card">
                   <span class="how-step-num">Step 03</span>
-                  <div class="how-icon-wrap">💳</div>
-                  <div class="how-title">Pay via GCash</div>
-                  <p class="how-desc">Fast, secure, and hassle-free payment. We confirm and process your order right away.</p>
-               </div>
-               <div class="how-card">
-                  <span class="how-step-num">Step 04</span>
                   <div class="how-icon-wrap">⚡</div>
-                  <div class="how-title">Instant Delivery</div>
+                  <div class="how-title">Receive Your Access</div>
                   <p class="how-desc">Access details sent immediately after payment confirmation. Start using right away!</p>
                </div>
             </div>
@@ -1217,20 +1250,20 @@
             <div class="faq-list fade-in">
                <div class="faq-item">
                   <div class="faq-question" onclick="toggleFaq(this)">
-                     <span>🛡️ Is JIA Premiums legit and safe?</span>
+                     <span>📦 How do I receive my order?</span>
                      <span class="faq-icon">+</span>
                   </div>
                   <div class="faq-answer">
-                     <p>Yes! JIA Premiums has been operating since 2021 — over 4 years of trusted service with 1,000+ happy clients. All orders are processed manually by a real person, and access is delivered directly to you via Messenger. Many of our clients are repeat buyers and have vouched for us publicly. You can check our reviews section and proof screenshots above for evidence of real transactions.</p>
+                     <p>Once your payment is confirmed, we send your access details (login credentials or invite link) directly to you on Facebook Messenger. Everything is delivered digitally — no shipping, no waiting for a courier. Just save the details we send you and you're ready to go.</p>
                   </div>
                </div>
                <div class="faq-item">
                   <div class="faq-question" onclick="toggleFaq(this)">
-                     <span>⚡ How fast is the delivery?</span>
+                     <span>⚡ How long does activation take?</span>
                      <span class="faq-icon">+</span>
                   </div>
                   <div class="faq-answer">
-                     <p>Most orders are delivered within minutes after payment confirmation via GCash. We are active on Messenger daily and respond fast. In rare cases (especially late at night), delivery may take up to a few hours — but we always deliver before the next morning. You'll receive your access credentials directly on Messenger.</p>
+                     <p>Most orders are activated within minutes after payment confirmation via GCash. We are active on Messenger daily and respond fast. In rare cases (especially late at night), activation may take up to a few hours — but we always deliver before the next morning.</p>
                   </div>
                </div>
                <div class="faq-item">
@@ -1239,25 +1272,25 @@
                      <span class="faq-icon">+</span>
                   </div>
                   <div class="faq-answer">
-                     <p>We currently accept GCash as our primary payment method. It's fast, secure, and widely available in the Philippines. Once you place your order via the form or Messenger, we'll send you our GCash number. Payment is only required after we confirm your order details — no advance payment with no confirmation.</p>
+                     <p>We currently accept GCash as our primary payment method. It's fast, secure, and widely available in the Philippines. Once you place your order via the form or Messenger, we'll send you our GCash number. Payment is only required after we confirm your order details.</p>
                   </div>
                </div>
                <div class="faq-item">
                   <div class="faq-question" onclick="toggleFaq(this)">
-                     <span>🔄 What if my access stops working? Is there a replacement?</span>
+                     <span>💬 Do you offer customer support?</span>
                      <span class="faq-icon">+</span>
                   </div>
                   <div class="faq-answer">
-                     <p>Absolutely! If your access stops working during your subscription period, just message us on Messenger and we will replace it immediately at no extra cost. Replacements are part of our service guarantee. We stand behind every order we deliver — your subscription will be honored for the full duration you paid for.</p>
+                     <p>Yes! We offer fast, friendly support through Facebook Messenger. A real person responds to every message — usually within minutes. Whether you have a question before ordering or need help after, we're just a message away.</p>
                   </div>
                </div>
                <div class="faq-item">
                   <div class="faq-question" onclick="toggleFaq(this)">
-                     <span>📱 How do I place an order?</span>
+                     <span>🔄 What should I do if I encounter an issue?</span>
                      <span class="faq-icon">+</span>
                   </div>
                   <div class="faq-answer">
-                     <p>It's simple! Fill out the order form on this page (choose your service, duration, and account type), then click "Send Order via Messenger." You'll be redirected to our Facebook Messenger with your order details already filled in. We'll confirm the order, send our GCash number, and deliver your access right after payment. The whole process usually takes under 10 minutes!</p>
+                     <p>If your access stops working or you run into any problem during your subscription period, just message us on Messenger and we'll replace it immediately at no extra cost. We stand behind every order — your subscription is honored for the full duration you paid for.</p>
                   </div>
                </div>
             </div>
@@ -1273,14 +1306,14 @@
                <p class="section-sub">Reach out through any channel below. We respond fast and deliver even faster.</p>
             </div>
             <div style="text-align:center;margin-bottom:32px;" class="fade-in">
-               <a class="btn-primary" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">💬 Message Us Now →</a>
+               <a class="btn-primary" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank" rel="noopener">💬 Message Us Now →</a>
             </div>
             <div class="contact-grid fade-in">
-               <a class="contact-card" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank">
+               <a class="contact-card" href="https://www.facebook.com/messages/t/1226740227182391" target="_blank" rel="noopener">
                   <span class="contact-icon">💬</span>
                   <div><div class="contact-label">Facebook Messenger</div><div class="contact-val">@Jia Premiums</div></div>
                </a>
-               <a class="contact-card" href="https://www.facebook.com/profile.php?id=61591073026036" target="_blank">
+               <a class="contact-card" href="https://www.facebook.com/profile.php?id=61591073026036" target="_blank" rel="noopener">
                   <span class="contact-icon">📘</span>
                   <div><div class="contact-label">Facebook Page</div><div class="contact-val">JIA Premiums</div></div>
                </a>
@@ -1364,44 +1397,108 @@
 
          const DURATION_LABELS = { '1':'1 Month','3':'3 Months','6':'6 Months','12':'12 Months (1 Year)' };
          const TYPE_LABELS = { solo1:'Solo Account (1 Screen)',solo2:'Solo Profile (2 Screens)',shared:'Shared Account (1 Screen)',shared3:'Shared Account (3 Screens)',shared5:'Shared Account (5 Screens)',shared6:'Shared Account (6 Screens)' };
-         const ALL_TYPES = ['solo1','solo2','shared','shared3','shared5','shared6'];
+         // Fallback duration/type lists ONLY used for products that don't yet have pricing data configured
+         // (the AI-tools catalog). As soon as `pricing` is filled in for a product, its own data drives the dropdowns.
+         const FALLBACK_DURATIONS = ['1','3','6','12'];
+         const FALLBACK_TYPES = ['solo1','shared'];
+
+         // Configurable product badges — controlled entirely by data, not hardcoded per-card markup.
+         // Add/remove entries here to change what shows on the storefront cards.
+         const BADGES = {
+           'Netflix': 'bestseller',
+           'ChatGPT Plus': 'popular',
+           'Canva': 'bestseller',
+           'CapCut': 'limited',
+           'Disney+': 'popular',
+         };
+         const BADGE_LABELS = { bestseller: '🏆 Best Seller', popular: '🔥 Popular', limited: '⏳ Limited Slots' };
+
+         function getDurationsFor(svc) {
+           if (svc && svc.pricing && Object.keys(svc.pricing).length) {
+             return Object.keys(svc.pricing).sort((a, b) => Number(a) - Number(b));
+           }
+           return FALLBACK_DURATIONS;
+         }
+
+         function getTypesFor(svc, duration) {
+           if (svc && svc.pricing && duration && svc.pricing[duration]) {
+             return Object.keys(svc.pricing[duration]);
+           }
+           if (svc && svc.types && svc.types.length) return svc.types;
+           return FALLBACK_TYPES;
+         }
 
          // ── ORDER PRODUCT (from card click) ──
          function orderProduct(serviceName) {
-           // Scroll to order form
            document.getElementById('order').scrollIntoView({ behavior: 'smooth', block: 'start' });
-           // Set the service after scroll
            setTimeout(() => {
-             const searchInput = document.getElementById('serviceSearch');
-             const hiddenService = document.getElementById('selectedService');
-             searchInput.value = serviceName;
-             hiddenService.value = serviceName;
-             dropdown.style.display = 'none';
-             updateAccountTypeOptions(serviceName);
-             updatePreview();
-             searchInput.focus();
+             selectService(serviceName);
+             document.getElementById('serviceSearch').focus();
            }, 600);
          }
 
+         // ── DYNAMIC DURATION ──
+         function updateDurationOptions(serviceName) {
+           const svc = SERVICES.find(s => s.name === serviceName);
+           const sel = document.getElementById('duration');
+           const currentVal = sel.value;
+
+           if (!serviceName) {
+             sel.innerHTML = '<option value="">— Select a service first —</option>';
+             sel.disabled = true;
+             sel.value = '';
+             return;
+           }
+
+           sel.disabled = false;
+           const durations = getDurationsFor(svc);
+           sel.innerHTML = '<option value="">— Select Duration —</option>' +
+             durations.map(d => `<option value="${d}">${DURATION_LABELS[d] || d + ' Months'}</option>`).join('');
+
+           if (durations.includes(currentVal)) sel.value = currentVal;
+           else sel.value = '';
+         }
+
          // ── DYNAMIC ACCOUNT TYPE ──
-         function updateAccountTypeOptions(serviceName) {
+         function updateAccountTypeOptions(serviceName, duration) {
            const svc = SERVICES.find(s => s.name === serviceName);
            const sel = document.getElementById('accountType');
            const currentVal = sel.value;
-           sel.innerHTML = '<option value="">— Select Type —</option>';
 
-           const typesToShow = (svc && svc.types && svc.types.length > 0) ? svc.types : ALL_TYPES;
-           typesToShow.forEach(t => {
-             const opt = document.createElement('option');
-             opt.value = t;
-             opt.textContent = TYPE_LABELS[t];
-             sel.appendChild(opt);
-           });
+           if (!serviceName) {
+             sel.innerHTML = '<option value="">— Select a service first —</option>';
+             sel.disabled = true;
+             sel.value = '';
+             return;
+           }
 
-           // Restore value if still valid
+           sel.disabled = false;
+           const typesToShow = getTypesFor(svc, duration);
+           sel.innerHTML = '<option value="">— Select Type —</option>' +
+             typesToShow.map(t => `<option value="${t}">${TYPE_LABELS[t] || t}</option>`).join('');
+
            if (typesToShow.includes(currentVal)) sel.value = currentVal;
            else sel.value = '';
          }
+
+         function renderProductBadges() {
+           document.querySelectorAll('.product-card[data-service]').forEach(card => {
+             const variant = BADGES[card.dataset.service];
+             if (!variant) return;
+             const header = card.querySelector('.product-card-header');
+             const existingBadge = header.querySelector('.product-badge');
+             if (!existingBadge || existingBadge.parentElement.classList.contains('product-badge-row')) return;
+             const row = document.createElement('div');
+             row.className = 'product-badge-row';
+             const extra = document.createElement('span');
+             extra.className = 'product-badge ' + variant;
+             extra.textContent = BADGE_LABELS[variant];
+             header.insertBefore(row, existingBadge);
+             row.appendChild(existingBadge);
+             row.appendChild(extra);
+           });
+         }
+         renderProductBadges();
 
          // ── COUNTDOWN ──
          function updateCountdown() {
@@ -1472,25 +1569,50 @@
          const searchInput = document.getElementById('serviceSearch');
          const dropdown = document.getElementById('serviceDropdown');
          const hiddenService = document.getElementById('selectedService');
+         let searchDebounce = null;
 
          searchInput.addEventListener('input',()=>{
-           const q = searchInput.value.trim().toLowerCase();
-           if(!q){ dropdown.style.display='none'; hiddenService.value=''; updateAccountTypeOptions(null); return; }
-           const matches = SERVICES.filter(s=>s.name.toLowerCase().includes(q)||s.cat.toLowerCase().includes(q));
-           if(!matches.length){ dropdown.style.display='none'; return; }
-           dropdown.innerHTML = matches.map(s=>`<div class="dd-item" onclick="selectService('${s.name}')"><span>${s.icon}</span><span>${s.name}</span><span class="dd-cat">${s.cat}</span></div>`).join('');
-           dropdown.style.display='block';
+           clearTimeout(searchDebounce);
+           searchDebounce = setTimeout(()=>{
+             const q = searchInput.value.trim().toLowerCase();
+             if (hiddenService.value && hiddenService.value.toLowerCase() !== q) {
+               hiddenService.value = '';
+               updateDurationOptions(null);
+               updateAccountTypeOptions(null);
+               updatePreview();
+             }
+             if(!q){ dropdown.style.display='none'; searchInput.setAttribute('aria-expanded','false'); return; }
+             const matches = SERVICES.filter(s=>s.name.toLowerCase().includes(q)||s.cat.toLowerCase().includes(q));
+             if(!matches.length){
+               dropdown.innerHTML = '<div class="no-results">No matching services. Try a different keyword or message us directly.</div>';
+               dropdown.style.display='block';
+               searchInput.setAttribute('aria-expanded','true');
+               return;
+             }
+             dropdown.innerHTML = matches.map(s=>`<div class="dd-item" onclick="selectService('${s.name.replace(/'/g,"\\'")}')"><span>${s.icon}</span><span>${s.name}</span><span class="dd-cat">${s.cat}</span></div>`).join('');
+             dropdown.style.display='block';
+             searchInput.setAttribute('aria-expanded','true');
+           }, 120);
          });
 
          function selectService(name){
            searchInput.value = name;
            hiddenService.value = name;
            dropdown.style.display='none';
-           updateAccountTypeOptions(name);
+           searchInput.setAttribute('aria-expanded','false');
+           clearFieldError('serviceError');
+           updateDurationOptions(name);
+           updateAccountTypeOptions(name, '');
            updatePreview();
          }
 
          document.addEventListener('click',e=>{ if(!e.target.closest('.search-wrapper')) dropdown.style.display='none'; });
+
+         document.getElementById('duration').addEventListener('change', () => {
+           clearFieldError('durationError');
+           updateAccountTypeOptions(hiddenService.value, document.getElementById('duration').value);
+           updatePreview();
+         });
 
          // ── ORDER PREVIEW ──
          function getPrice(){
@@ -1504,47 +1626,145 @@
          }
 
          function updatePreview(){
-           const name = document.getElementById('fname').value.trim();
-           const svc = hiddenService.value;
-           const dur = document.getElementById('duration').value;
-           const type = document.getElementById('accountType').value;
+           const fb    = document.getElementById('fbname').value.trim();
+           const phone = document.getElementById('phone').value.trim();
+           const source= document.getElementById('source').value;
+           const svc   = hiddenService.value;
+           const dur   = document.getElementById('duration').value;
+           const type  = document.getElementById('accountType').value;
+           const notes = document.getElementById('notes').value.trim();
            const preview = document.getElementById('orderPreview');
-           if(!svc&&!dur&&!type){ preview.classList.remove('visible'); return; }
+           const emptyState = document.getElementById('orderEmptyState');
+
+           if(!svc){ preview.classList.remove('visible'); emptyState.style.display='flex'; return; }
+           emptyState.style.display='none';
            preview.classList.add('visible');
-           document.getElementById('previewName').textContent = name||'—';
+           document.getElementById('previewName').textContent = fb||'—';
+           document.getElementById('previewPhone').textContent = phone||'—';
+           document.getElementById('previewSource').textContent = source||'—';
            document.getElementById('previewService').textContent = svc||'—';
            document.getElementById('previewDuration').textContent = DURATION_LABELS[dur]||'—';
            document.getElementById('previewType').textContent = TYPE_LABELS[type]||'—';
+           const notesRow = document.getElementById('previewNotesRow');
+           if (notes) { notesRow.style.display='flex'; document.getElementById('previewNotes').textContent = notes; }
+           else { notesRow.style.display='none'; }
            const price = getPrice();
            document.getElementById('previewPrice').textContent = price ? '₱'+price.toLocaleString() : '';
          }
 
-         ['fname','duration','accountType','notes'].forEach(id=>{
+         ['fbname','phone','source','duration','accountType','notes'].forEach(id=>{
            document.getElementById(id).addEventListener('change',updatePreview);
            document.getElementById(id).addEventListener('input',updatePreview);
          });
 
+         // ── FIELD VALIDATION HELPERS ──
+         function showFieldError(errId, inputId){
+           const errEl = document.getElementById(errId);
+           if (errEl) errEl.classList.add('visible');
+           if (inputId) { const el = document.getElementById(inputId); if (el) el.classList.add('invalid'); }
+         }
+         function clearFieldError(errId, inputId){
+           const errEl = document.getElementById(errId);
+           if (errEl) errEl.classList.remove('visible');
+           if (inputId) { const el = document.getElementById(inputId); if (el) el.classList.remove('invalid'); }
+         }
+         const CLEAR_ON_INPUT = { serviceSearch:'serviceError', fbname:'fbnameError', phone:'phoneError' };
+         Object.keys(CLEAR_ON_INPUT).forEach(id=>{
+           document.getElementById(id).addEventListener('input', ()=> clearFieldError(CLEAR_ON_INPUT[id], id));
+         });
+
+         // ── TOAST ──
+         function showToast(message, isError){
+           let toast = document.getElementById('appToast');
+           if (!toast) {
+             toast = document.createElement('div');
+             toast.id = 'appToast';
+             toast.className = 'toast';
+             document.body.appendChild(toast);
+           }
+           toast.textContent = message;
+           toast.classList.toggle('error', !!isError);
+           toast.classList.add('visible');
+           clearTimeout(toast._hideTimer);
+           toast._hideTimer = setTimeout(()=> toast.classList.remove('visible'), 2600);
+         }
+
+         // ── COPY TO CLIPBOARD (cross-browser: Clipboard API + execCommand fallback) ──
+         function buildSummaryText(){
+           const fb    = document.getElementById('fbname').value.trim() || '—';
+           const phone = document.getElementById('phone').value.trim() || '—';
+           const source= document.getElementById('source').value || '—';
+           const svc   = hiddenService.value || '—';
+           const dur   = DURATION_LABELS[document.getElementById('duration').value] || '—';
+           const type  = TYPE_LABELS[document.getElementById('accountType').value] || '—';
+           const notes = document.getElementById('notes').value.trim() || 'None';
+           const price = getPrice();
+           return `Messenger Name: ${fb}\nPhone Number: ${phone}\nSource: ${source}\nService: ${svc}\nDuration: ${dur}\nAccount Type: ${type}\nPrice: ${price ? '₱'+price.toLocaleString() : '—'}\nNotes: ${notes}`;
+         }
+
+         async function copyOrderSummary(){
+           const text = buildSummaryText();
+           try {
+             if (navigator.clipboard && window.isSecureContext) {
+               await navigator.clipboard.writeText(text);
+               showToast('✅ Order summary copied!');
+               return;
+             }
+             throw new Error('Clipboard API unavailable');
+           } catch (err) {
+             // Fallback for older/less-supported browsers (e.g. some iOS Safari / in-app webviews)
+             try {
+               const ta = document.createElement('textarea');
+               ta.value = text;
+               ta.setAttribute('readonly','');
+               ta.style.position = 'fixed';
+               ta.style.top = '-1000px';
+               ta.style.left = '-1000px';
+               document.body.appendChild(ta);
+               ta.focus();
+               ta.select();
+               ta.setSelectionRange(0, text.length);
+               const ok = document.execCommand('copy');
+               document.body.removeChild(ta);
+               if (ok) showToast('✅ Order summary copied!');
+               else throw new Error('execCommand failed');
+             } catch (fallbackErr) {
+               showToast('⚠️ Could not copy automatically — please select and copy manually.', true);
+             }
+           }
+         }
+
          // ── SUBMIT ──
          function submitOrder(){
-           const name = document.getElementById('fname').value.trim();
-           const fb   = document.getElementById('fbname').value.trim();
-           const svc  = hiddenService.value;
-           const dur  = document.getElementById('duration').value;
-           const type = document.getElementById('accountType').value;
-           const notes= document.getElementById('notes').value.trim();
-           if(!name||!fb||!svc||!dur||!type){
-             alert('Please fill in all required fields before submitting.');
+           const fb    = document.getElementById('fbname').value.trim();
+           const phone = document.getElementById('phone').value.trim();
+           const source= document.getElementById('source').value;
+           const svc   = hiddenService.value;
+           const dur   = document.getElementById('duration').value;
+           const type  = document.getElementById('accountType').value;
+           const notes = document.getElementById('notes').value.trim();
+
+           ['serviceError','durationError','accountTypeError','fbnameError','phoneError'].forEach(id => clearFieldError(id));
+           ['serviceSearch','duration','accountType','fbname','phone'].forEach(id => document.getElementById(id).classList.remove('invalid'));
+
+           let hasError = false;
+           if(!svc){ showFieldError('serviceError','serviceSearch'); hasError = true; }
+           if(!dur){ showFieldError('durationError','duration'); hasError = true; }
+           if(!type){ showFieldError('accountTypeError','accountType'); hasError = true; }
+           if(!fb){ showFieldError('fbnameError','fbname'); hasError = true; }
+           const phoneDigits = phone.replace(/\D/g,'');
+           if(!phone || phoneDigits.length < 10){ showFieldError('phoneError','phone'); hasError = true; }
+
+           if (hasError) {
+             showToast('⚠️ Please complete all required fields.', true);
              return;
            }
+
            const price = getPrice();
-           const priceText = price ? ` | Price: ₱${price.toLocaleString()}` : '';
-           const msg = `Hi JIA Premiums!\n\n━━━━━━━━━━━━━━\nORDER DETAILS\n━━━━━━━━━━━━━━\n\n• Name: ${name}\n• Messenger: ${fb}\n• Service: ${svc}\n• Duration: ${DURATION_LABELS[dur]}\n• Type: ${TYPE_LABELS[type]}${priceText}\n\n• Notes:\n${notes || 'None'}\n\n━━━━━━━━━━━━━━\n\nI'd like to place this order.\nPlease send GCash details.\nThank you!`;
+           const priceText = price ? `₱${price.toLocaleString()}` : 'To be confirmed';
+           const msg = `Hi JIA Premiums! I'd like to place an order.\n\n━━━━━━━━━━━━━━\nORDER DETAILS\n━━━━━━━━━━━━━━\nMessenger Name: ${fb}\nPhone Number: ${phone}\nSource: ${source || 'Not specified'}\nService: ${svc}\nDuration: ${DURATION_LABELS[dur]}\nAccount Type: ${TYPE_LABELS[type]}\nPrice: ${priceText}\nNotes: ${notes || 'None'}\n━━━━━━━━━━━━━━\n\nPlease send GCash details. Thank you!`;
            const encodedMsg = encodeURIComponent(msg);
-           const PAGE_ID = "1226740227182391";
-           window.open(
-`https://m.me/61591073026036?text=${encodedMsg}`,
-"_blank"
-);
+           window.open(`https://m.me/61591073026036?text=${encodedMsg}`, '_blank', 'noopener');
          }
 
          // ── PROOF CAROUSEL ──
